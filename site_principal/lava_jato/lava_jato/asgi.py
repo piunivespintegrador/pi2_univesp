@@ -1,5 +1,5 @@
 """
-ASGI config for site_principal project.
+ASGI config for lava_jato project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'site_principal.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lava_jato.settings')
 
 application = get_asgi_application()

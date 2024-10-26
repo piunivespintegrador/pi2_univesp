@@ -1,5 +1,5 @@
 """
-WSGI config for site_principal project.
+WSGI config for lava_jato project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'site_principal.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lava_jato.settings')
 
 application = get_wsgi_application()

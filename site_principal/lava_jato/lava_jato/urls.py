@@ -1,5 +1,5 @@
 """
-URL configuration for site_principal project.
+URL configuration for lava_jato project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
