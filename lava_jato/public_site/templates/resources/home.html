@@ -3,64 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lava Jato</title>
-    <style>
-        /* Estilos básicos para o layout */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        .banner, .propagandas, .footer { background-color: #f4f4f4; padding: 20px; text-align: center; }
-        .buttons { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
-        .button { padding: 10px 20px; background-color: #32CD32; color: white; border-radius: 5px; text-decoration: none; }
-        .section { padding: 20px; text-align: center; }
-        .grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-        .grid-item { background-color: #e7e7e7; padding: 20px; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; }
-        .faq { margin-top: 30px; }
-        .faq-item { padding: 10px; background-color: #f4f4f4; border-bottom: 1px solid #ddd; cursor: pointer; }
-        .footer { margin-top: 20px; padding: 20px; font-size: 12px; }
-    </style>
+    <title>Meu Site Profissional</title>
+    <!-- Carregar arquivos estáticos do Django -->
+    {% load static %}
+    <!-- Referência ao arquivo CSS -->
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
 </head>
 <body>
+    <!-- Banner -->
     <div class="banner">
-        <h2>Banner</h2>
+        <h2>Bem-vindo ao Nosso Site!</h2>
     </div>
 
+    <!-- Botões principais -->
     <div class="buttons">
         <a href="#" class="button">Agendar Agora</a>
         <a href="#" class="button">Whatsapp</a>
     </div>
 
+    <!-- Quem somos -->
     <div class="section">
         <h2>Quem somos?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis nibh nisl...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis nibh nisl. Praesent vel ultricies nisl, ac molestie est.</p>
     </div>
 
+    <!-- Grid de Serviços -->
     <div class="grid">
-        <div class="grid-item">Tipo de Serviço</div>
-        <div class="grid-item">Tipo de Serviço</div>
-        <div class="grid-item">Tipo de Serviço</div>
-        <div class="grid-item">Tipo de Serviço</div>
-        <div class="grid-item">Tipo de Serviço</div>
-        <div class="grid-item">Tipo de Serviço</div>
+        <div class="grid-item">Tipo de Serviço 1</div>
+        <div class="grid-item">Tipo de Serviço 2</div>
+        <div class="grid-item">Tipo de Serviço 3</div>
+        <div class="grid-item">Tipo de Serviço 4</div>
+        <div class="grid-item">Tipo de Serviço 5</div>
+        <div class="grid-item">Tipo de Serviço 6</div>
     </div>
 
+    <!-- FAQ -->
     <div class="faq">
         <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-        <div class="faq-item">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-        <div class="faq-item">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-        <div class="faq-item">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+        <div class="faq-item">O que fazemos?</div>
+        <div class="faq-item">Como funcionam nossos serviços?</div>
+        <div class="faq-item">Quais são as formas de pagamento?</div>
+        <div class="faq-item">Onde estamos localizados?</div>
     </div>
 
+    <!-- Propagandas -->
     <div class="propagandas">
         <h2>Propagandas</h2>
     </div>
 
+    <!-- Botões principais (replicados no fim da página) -->
     <div class="buttons">
         <a href="#" class="button">Agendar Agora</a>
         <a href="#" class="button">Whatsapp</a>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-        [Footer]
+        &copy; 2023 Meu Site. Todos os direitos reservados.
     </div>
 </body>
 </html>
