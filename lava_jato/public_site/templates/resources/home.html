@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Profissional</title>
+    <title>Lava Jato</title>
     <!-- Carregar arquivos estáticos do Django -->
     {% load static %}
     <!-- Referência ao arquivo CSS -->
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <!-- Script para o dropdown -->
+    <script src="{% static '/js/home.js' %}"></script>
 </head>
 <body>
     <!-- Banner -->
     <div class="banner">
-        <h2>Bem-vindo ao Nosso Site!</h2>
+        <h2>Bem-vindo ao Lava Jato!</h2>
     </div>
 
     <!-- Botões principais -->
@@ -37,13 +39,25 @@
         <div class="grid-item">Tipo de Serviço 6</div>
     </div>
 
-    <!-- FAQ -->
+    <!-- Perguntas Frequentes -->
     <div class="faq">
         <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">O que fazemos?</div>
-        <div class="faq-item">Como funcionam nossos serviços?</div>
-        <div class="faq-item">Quais são as formas de pagamento?</div>
-        <div class="faq-item">Onde estamos localizados?</div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">O que fazemos?</div>
+            <div class="answer">Nós oferecemos serviços de alta qualidade para todos os nossos clientes.</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">Como funcionam nossos serviços?</div>
+            <div class="answer">Nosso processo é simples e eficiente, garantindo a melhor experiência.</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">Quais são as formas de pagamento?</div>
+            <div class="answer">Aceitamos pagamentos via cartão de crédito, débito e transferências bancárias.</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">Onde estamos localizados?</div>
+            <div class="answer">Estamos localizados no centro da cidade, com fácil acesso.</div>
+        </div>
     </div>
 
     <!-- Propagandas -->
