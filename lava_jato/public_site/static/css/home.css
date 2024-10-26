@@ -144,3 +144,51 @@ body {
     color: #666;
     margin-top: 30px;
 }
+
+/* Estilos para o perguntas frequentes */
+
+.faq-item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #eee;
+}
+
+.question {
+    font-weight: bold;
+    color: #333;
+}
+
+.answer {
+    margin-top: 10px;
+    display: none; /* Oculto por padrão */
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    width: 100%;
+    max-width: 800px; /* Ajuste o tamanho conforme necessário */
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
