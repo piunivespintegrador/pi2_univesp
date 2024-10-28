@@ -73,7 +73,7 @@ body, html {
 
 /* Menu Lateral Oculto */
 .sidebar.collapsed {
-    width: 60px;
+    width: 100px;
 }
 
 .sidebar.collapsed nav ul li a {
@@ -81,5 +81,5 @@ body, html {
 }
 
 .main-content.collapsed {
-    margin-left: 60px;
+    margin-left: 0px;
 }
