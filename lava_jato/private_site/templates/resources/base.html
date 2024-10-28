@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão - Lava Jato XPTO</title>
+    <!-- Carregar arquivos estáticos do Django -->
+    {% load static %}
+    <!-- Referência ao arquivo CSS -->
+    <link rel="stylesheet" href="{% static '/css/admin.css' %}">
+    <!-- Script para o dropdown -->
+    <script src="{% static '/js/admin.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Menu Lateral -->
+        <div class="sidebar" id="sidebar">
+            <h2>Lava Jato XPTO</h2>
+            <button class="toggle-btn" id="toggle-btn" onclick="toggleMenu()">
+                <img 
+                    id="toggle-btn-svg" 
+                    src="{% static '/svg/arrow-left.svg' %}" 
+                    alt="toggle-button"
+                    arrow-left="{% static '/svg/arrow-left.svg' %}"
+                    arrow-right="{% static '/svg/arrow-right.svg' %}"
+                    />
+            </button>
+            <nav>
+                <ul>
+                    <!-- Links para o sistema de gestão -->
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li><a href="{% url 'manage_scheduling' %}">Gerenciar Agendamento</a></li>
+                    <li><a href="{% url 'make_scheduling' %}">Fazer um Agendamento</a></li>
+                    <li><a href="{% url 'report' %}">Relatórios</a></li>
+                    <li><a href="{% url 'site_edit' %}">Editar Site</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Área Principal -->
+        <div class="main-content" id="main-content">
+            {% block content %}
+            <!-- O conteúdo de cada página será renderizado aqui -->
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
