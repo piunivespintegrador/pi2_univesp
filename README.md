@@ -67,7 +67,8 @@ Execute as migrations do DJango
 
 ```
 python manage.py makemigrations
-python manage.py migrate
+python manage.py migrate --database=default
+python manage.py migrate --database=mysql_db
 ```
 
 Rode o Faker Data para popular o banco com dados para testes (Use apenas para testes)
