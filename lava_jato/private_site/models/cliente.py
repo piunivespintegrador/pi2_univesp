@@ -7,8 +7,8 @@ class Cliente(models.Model):
     telefone_contato_1 = models.CharField(max_length=20)
     telefone_contato_2 = models.CharField(max_length=20, null=True, blank=True)
 
+    class Meta:
+        db_table = 'cliente'
+
     def __str__(self):
         return f"{self.nome} {self.email_contato_1} {self.telefone_contato_1}"
-    
-    class Meta:
-        app_label = 'mysql'

@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'lava_jato',         # Nome do banco de dados
         'USER': 'seu_usuario',       # Usuário do banco de dados
         'PASSWORD': 'sua_senha',     # Senha do banco de dados
-        'HOST': 'localhost',         # Endereço do servidor (pode ser 'localhost' para local)
+        'HOST': '127.0.0.1',         # Endereço do servidor (pode ser 'localhost' para local)
         'PORT': '3306',              # Porta do MySQL, geralmente 3306
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
