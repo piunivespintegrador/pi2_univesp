@@ -14,7 +14,8 @@ class Servico(models.Model):
     valor_servico = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return f"Serviço {self.id} para {self.cliente}"
+        return f"Serviço {self.id} para {self.cliente.nome} \
+            com agendamento {self.agendamento.id}"
     
     class Meta:
         app_label = 'mysql'
