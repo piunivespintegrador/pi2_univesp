@@ -69,7 +69,7 @@ Execute as migrations do DJango
 
 ```python manage.py migrate```
 
-Rode o Faker Data para popular os dados com dados (Use apenas para testes)
+Rode o Faker Data para popular o banco com dados para testes (Use apenas para testes)
 
 ```python manage.py populate_data```
 
