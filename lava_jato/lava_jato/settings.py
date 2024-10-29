@@ -79,6 +79,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'mysql_db': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lava_jato',         # Nome do banco de dados
+        'USER': 'seu_usuario',       # Usuário do banco de dados
+        'PASSWORD': 'sua_senha',     # Senha do banco de dados
+        'HOST': 'localhost',         # Endereço do servidor (pode ser 'localhost' para local)
+        'PORT': '3306',              # Porta do MySQL, geralmente 3306
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
 
