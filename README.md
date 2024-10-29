@@ -67,9 +67,9 @@ No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e 
 'mysql_db': {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'lava_jato',     # Nome do banco de dados
-    'USER': 'seu_usuario',   # Usuário do banco de dados
-    'PASSWORD': 'sua_senha', # Senha do banco de dados
-    'HOST': 'localhost',     # Endereço do servidor (pode ser 'localhost' para local)
+    'USER': 'root',          # Usuário do banco de dados
+    'PASSWORD': 'root',      # Senha do banco de dados
+    'HOST': '127.0.0.1',     # Endereço do servidor (pode ser 'localhost' para local)
     'PORT': '3306',          # Porta do MySQL, geralmente 3306
     'OPTIONS': {
         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -84,13 +84,13 @@ Verifique a conexão com o banco de dados
 python manage.py check
 ```
 
-Crie os arquivos migration
+Crie os arquivos das migrations
 
 ```
 python manage.py makemigrations
 ```
 
-Execute as migrations nos bancos
+Execute as migrations no bancos
 
 ```
 python manage.py migrate --database=default
