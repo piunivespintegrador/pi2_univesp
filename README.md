@@ -93,8 +93,15 @@ python manage.py makemigrations
 Execute as migrations no bancos
 
 ```
-python manage.py migrate --database=default
-python manage.py migrate --database=mysql_db
+python manage.py migrate admin --database=default
+python manage.py migrate auth --database=default
+python manage.py migrate sessions --database=default
+
+python manage.py migrate private_site --database=mysql_db
+python manage.py migrate public_site --database=mysql_db
+
+python manage.py migrate private_site --database=mongo_db
+python manage.py migrate public_site --database=mongo_db
 ```
 
 Rode o Faker Data para popular o banco com dados para testes (Use apenas para testes)
