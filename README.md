@@ -45,19 +45,17 @@ Entre na pasta do projeto
 No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e o usuário criado por você na criação do banco de dados.
 
 ```
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lava_jato',     # Nome do banco de dados
-        'USER': 'seu_usuario',   # Usuário do banco de dados
-        'PASSWORD': 'sua_senha', # Senha do banco de dados
-        'HOST': 'localhost',     # Endereço do servidor (pode ser 'localhost' para local)
-        'PORT': '3306',          # Porta do MySQL, geralmente 3306
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
-        },
-    }
+'mysql_db': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'lava_jato',     # Nome do banco de dados
+    'USER': 'seu_usuario',   # Usuário do banco de dados
+    'PASSWORD': 'sua_senha', # Senha do banco de dados
+    'HOST': 'localhost',     # Endereço do servidor (pode ser 'localhost' para local)
+    'PORT': '3306',          # Porta do MySQL, geralmente 3306
+    'OPTIONS': {
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        'charset': 'utf8mb4',
+    },
 }
 ```
 
@@ -67,7 +65,10 @@ Verifique a conexão com o banco de dados
 
 Execute as migrations do DJango
 
-```python manage.py migrate```
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 
 Rode o Faker Data para popular o banco com dados para testes (Use apenas para testes)
 

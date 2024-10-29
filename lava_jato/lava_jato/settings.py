@@ -94,6 +94,7 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = ['lava_jato.routers.MySQLRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
