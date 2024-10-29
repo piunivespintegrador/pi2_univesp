@@ -21,6 +21,12 @@ Instalação do DJango Versão 5.1.2
 python3 -m pip install django==5.1.2
 ```
 
+Instalação do Faker
+
+```
+pip install Faker
+```
+
 Instalação do driver mysqlclient
 
 ```
@@ -42,7 +48,8 @@ pip install django-mysql
 
 * OBS: Se existir algum problema com o uso do mysqlclient, utilize o django-mysql
 
-Faça a instalação do MySQL
+Faça a instalação do MySQL (Docker)
+Faça a instalação do MongoDB (Docker)
 
 Crie o banco de dados do projeto
 
