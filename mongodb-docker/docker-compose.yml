@@ -1,0 +1,53 @@
+# https://gist.github.com/gterdem/ac5b0f135fba034333dd4597edd2e278
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    container_name: lava-jato-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=lava_jato
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - mongodb_network
+    ports:
+      - 27017:27017
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: unless-stopped
+
+  mongo-express:
+    image: mongo-express
+    container_name: lava-jato-mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=lava_jato
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+    depends_on:
+      - mongodb
+    networks:
+      - mongodb_network
+    ports:
+      - 8081:8081
+    healthcheck:
+      test:  wget --quiet --tries=3 --spider http://admin:admin@mongo-express:8081 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes: 
+  mongodb_data:
+    driver: local
+    name: mongodb_data
+  
+networks:
+  mongodb_network:
