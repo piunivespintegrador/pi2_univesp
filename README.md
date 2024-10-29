@@ -63,10 +63,13 @@ Verifique a conexão com o banco de dados
 
 ```python manage.py check```
 
-Execute as migrations do DJango
+Crie os arquivos migration
+
+```python manage.py makemigrations```
+
+Execute as migrations nos bancos
 
 ```
-python manage.py makemigrations
 python manage.py migrate --database=default
 python manage.py migrate --database=mysql_db
 ```
