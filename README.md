@@ -74,8 +74,8 @@ No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e 
 'mysql_db': {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'lava_jato',     # Nome do banco de dados
-    'USER': 'root',          # Usuário do banco de dados
-    'PASSWORD': 'root',      # Senha do banco de dados
+    'USER': 'seu_usuario',   # Usuário do banco de dados
+    'PASSWORD': 'sua_senha', # Senha do banco de dados
     'HOST': '127.0.0.1',     # Endereço do servidor (pode ser 'localhost' para local)
     'PORT': '3306',          # Porta do MySQL, geralmente 3306
     'OPTIONS': {
