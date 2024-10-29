@@ -3,27 +3,44 @@ Código do projeto integrador 2 usando Django 5.1.2
 
 Crie um ambiente virtual (venv) do python3 
 
-```python3 -m venv /path/to/new/virtual/environment```
+```
+python3 -m venv /path/to/new/virtual/environment
+```
 
 Faça o acesso do seu venv do python3
 
-```source /path/to/new/virtual/environment/bin/activate```
+```
+source /path/to/new/virtual/environment/bin/activate
+```
 
 Para mais detalhes acesse [venv](https://docs.python.org/pt-br/3/library/venv.html)
 
 Instalação do DJango Versão 5.1.2
 
-```python3 -m pip install django==5.1.2```
+```
+python3 -m pip install django==5.1.2
+```
 
 Instalação do driver mysqlclient
 
-```pip install mysqlclient```
+```
+pip install mysqlclient
+```
 
-* OBS: Se existir algum problema com o uso do mysqlclient, utilize o django-mysql
+
+* OBS: Caso você receba algum erro na instalação do mysqlclient, instale os pacotes essenciais
+
+```
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential pkg-config
+```
 
 Instalação do django-mysql
 
-```pip install django-mysql```
+```
+pip install django-mysql
+```
+
+* OBS: Se existir algum problema com o uso do mysqlclient, utilize o django-mysql
 
 Faça a instalação do MySQL
 
@@ -40,7 +57,9 @@ Isso criará um banco de dados chamado ```lava_jato``` com o usuário ```seu_usu
 
 Entre na pasta do projeto 
 
-```cd lava jato```
+```
+cd lava jato
+```
 
 No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e o usuário criado por você na criação do banco de dados.
 
@@ -61,11 +80,15 @@ No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e 
 
 Verifique a conexão com o banco de dados
 
-```python manage.py check```
+```
+python manage.py check
+```
 
 Crie os arquivos migration
 
-```python manage.py makemigrations```
+```
+python manage.py makemigrations
+```
 
 Execute as migrations nos bancos
 
@@ -76,10 +99,14 @@ python manage.py migrate --database=mysql_db
 
 Rode o Faker Data para popular o banco com dados para testes (Use apenas para testes)
 
-```python manage.py populate_data```
+```
+python manage.py populate_data
+```
 
 Rode o projeto
 
-```python manage.py runserver```
+```
+python manage.py runserver
+```
 
 O DJango irá dar acesso a página pelo ip ```http://127.0.0.1:8000/```
