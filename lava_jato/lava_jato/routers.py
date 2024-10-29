@@ -45,6 +45,11 @@ class MySQLRouter:
                 return 'mongo_db'
         return 'default'
 
+    def allow_relation(self, obj1, obj2, **hints):
+        if obj1._state.db == 'mysql_db' and obj2._state.db == 'mysql_db':
+            return True
+        return None
+
     def allow_migrate(self, db, app_label, model_name=None, **hints):
         """Permite migrações somente no banco de dados adequado."""
         if self.IsOwnerProject(app_label):

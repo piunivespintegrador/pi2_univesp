@@ -17,5 +17,4 @@ class Servico(models.Model):
         db_table = 'servico'
 
     def __str__(self):
-        return f"Serviço {self.id} para {self.cliente.nome} \
-            com agendamento {self.agendamento.id}"
+        return f"Serviço {self.id} para {self.cliente.nome} com agendamento {self.agendamento.id}"

@@ -11,4 +11,4 @@ class ServicoFormaContato(models.Model):
         db_table = 'servico_forma_contato'
 
     def __str__(self):
-        return f"Serviço {self.servico.id} - {self.forma_contato.forma_nome}"
+        return f"Serviço {self.servico.id} - Contato {self.forma_contato_id}"
