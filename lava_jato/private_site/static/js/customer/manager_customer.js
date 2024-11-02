@@ -26,7 +26,7 @@ function closeAlertModal() {
 // Função para excluir o cliente usando AJAX
 function deleteCustomer() {
     if (cliente_id) {
-        fetch(`/admin/delete_customer/`, {
+        fetch(`/admin/customer/delete_customer/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
