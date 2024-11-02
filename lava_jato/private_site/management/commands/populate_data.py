@@ -27,6 +27,11 @@ class Command(BaseCommand):
         self.create_servicos()
         self.stdout.write(self.style.SUCCESS('Dados fake gerados com sucesso!'))
 
+    def generate_fake_plate(self):
+        letters = ''.join(random.choices('ABCDEFGHIJKLMNOPQRSTUVWXYZ', k=3))
+        numbers = ''.join(random.choices('0123456789', k=4))
+        return f'{letters}-{numbers}'
+
     def create_forma_contato(self):
         formas = ['Email', 'Telefone', 'WhatsApp']
 
@@ -60,8 +65,9 @@ class Command(BaseCommand):
         for _ in range(n):
             cliente = Cliente.objects.using('mysql_db').create(
                 nome=fake.name(),
-                email_contato_1=fake.email(),
-                email_contato_2=fake.email() if random.choice([True, False]) else None,
+                placa_carro=self.generate_fake_plate(),
+                email_contato_1=fake.email()[:20],
+                email_contato_2=fake.email()[:20] if random.choice([True, False]) else None,
                 telefone_contato_1=fake.phone_number()[:20],
                 telefone_contato_2=fake.phone_number()[:20] if random.choice([True, False]) else None
             )
