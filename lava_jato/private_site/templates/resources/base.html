@@ -8,41 +8,52 @@
     {% load static %}
     <!-- Referência ao arquivo CSS -->
     <link rel="stylesheet" href="{% static '/css/admin.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Script para o dropdown -->
     <script src="{% static '/js/admin.js' %}"></script>
 </head>
-<body>
-    <div class="container">
-        <!-- Menu Lateral -->
-        <div class="sidebar" id="sidebar">
-            <h2>Lava Jato XPTO</h2>
-            <button class="toggle-btn" id="toggle-btn" onclick="toggleMenu()">
-                <img 
-                    id="toggle-btn-svg" 
-                    src="{% static '/svg/arrow-left.svg' %}" 
-                    alt="toggle-button"
-                    arrow-left="{% static '/svg/arrow-left.svg' %}"
-                    arrow-right="{% static '/svg/arrow-right.svg' %}"
-                    />
-            </button>
-            <nav>
-                <ul>
-                    <!-- Links para o sistema de gestão -->
-                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
-                    <li><a href="{% url 'manage_scheduling' %}">Gerenciar Agendamento</a></li>
-                    <li><a href="{% url 'make_scheduling' %}">Fazer um Agendamento</a></li>
-                    <li><a href="{% url 'report' %}">Relatórios</a></li>
-                    <li><a href="{% url 'site_edit' %}">Editar Site</a></li>
-                </ul>
-            </nav>
-        </div>
 
-        <!-- Área Principal -->
-        <div class="main-content" id="main-content">
-            {% block content %}
-            <!-- O conteúdo de cada página será renderizado aqui -->
-            {% endblock %}
+<body>
+    <div class="navbar">
+        <a href="{% url 'dashboard' %}">Principal</a>
+        <div class="subnav">
+            <button class="subnavbtn">Consulta <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="{% url 'manager_customer' %}">Consultar Clientes</a>
+                <a href="{% url 'manager_scheduling' %}">Consultar Agendamentos</a>
+                <a href="{% url 'manager_service' %}">Consultar Serviços</a>
+                <a href="{% url 'manager_type_service' %}">Consultar Tipo Serviço</a>
+                <a href="{% url 'manager_type_vehicle' %}">Consultar Tipo Veículo</a>
+            </div>
+        </div> 
+        <div class="subnav">
+            <button class="subnavbtn">Cadastro <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="{% url 'register_customer' %}">Cadastrar Cliente</a>
+                <a href="{% url 'register_scheduling' %}">Cadastrar Agendamento</a>
+                <a href="{% url 'register_service' %}">Cadastrar Serviço</a>
+                <a href="{% url 'register_type_service' %}">Cadastrar Tipo Serviço</a>
+                <a href="{% url 'register_type_vehicle' %}">Cadastrar Tipo Veículo</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Business Intelligence (BI) <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="{% url 'bi_report' %}">Relatório dos Dados</a>
+                <a href="{% url 'bi_analysis' %}">Análise dos Dados</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Site <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="{% url 'site_edit' %}">Editar Site</a>
+            </div>
         </div>
     </div>
+
+    <div style="padding:0 16px">
+        {% block content %}
+        <!-- O conteúdo de cada página será renderizado aqui -->
+        {% endblock %}
+    </div>
 </body>
-</html>
