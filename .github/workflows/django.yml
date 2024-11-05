@@ -27,4 +27,4 @@ jobs:
         pip install -r lava_jato/requirements.txt
     - name: Run Tests
       run: |
-        python lava_jato/manage.py runserver 8000
+        python lava_jato/manage.py runserver 0.0.0.0:8000 --noreload
