@@ -1,5 +1,5 @@
 # Univesp PI 2
-Código do projeto integrador 2 usando Django 5.1.2
+Código do projeto integrador 2 usando Django 5.1.2 e Python 3.12.3
 
 Crie um ambiente virtual (venv) do python3 
 
@@ -15,41 +15,13 @@ source /path/to/new/virtual/environment/bin/activate
 
 Para mais detalhes acesse [venv](https://docs.python.org/pt-br/3/library/venv.html)
 
-Instalação do DJango Versão 5.1.2
+Instalação das Dependências do Projeto
 
 ```
-python3 -m pip install django==5.1.2
+pip install -r requirements.txt
 ```
-
-Instalação do Faker
-
-```
-pip install Faker
-```
-
-Instalação do driver mysqlclient
-
-```
-pip install mysqlclient
-```
-
-
-* OBS: Caso você receba algum erro na instalação do mysqlclient, instale os pacotes essenciais
-
-```
-sudo apt-get install python3-dev default-libmysqlclient-dev build-essential pkg-config
-```
-
-Instalação do django-mysql
-
-```
-pip install django-mysql
-```
-
-* OBS: Se existir algum problema com o uso do mysqlclient, utilize o django-mysql
 
 Faça a instalação do MySQL (Docker)
-Faça a instalação do MongoDB (Docker)
 
 Crie o banco de dados do projeto
 
