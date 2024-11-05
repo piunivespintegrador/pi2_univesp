@@ -1,4 +1,20 @@
 # Univesp PI 2
+
+Projeto Integrador II
+
+Participantes:
+
+```
+Angra Dias de Olivera
+Bruno Rosendo Alves
+Felipe de Oliveira
+Gabriel Antonio Ribeiro da Silva
+Lucas Campos Achcar
+Lucas Edson Santos Silva
+Raquel Alves Nogueira Santos
+Silvio Soares Pereira
+```
+
 Código do projeto integrador 2 usando Django 5.1.2 e Python 3.12.3
 
 Crie um ambiente virtual (venv) do python3 
