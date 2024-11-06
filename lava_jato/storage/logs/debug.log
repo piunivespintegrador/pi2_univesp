@@ -1,0 +1,823 @@
+INFO 2024-11-06 17:50:26,335 autoreload Watching for file changes with StatReloader
+DEBUG 2024-11-06 17:50:26,335 autoreload Waiting for apps ready_event.
+DEBUG 2024-11-06 17:50:26,339 autoreload Apps ready_event triggered. Sending autoreload_started signal.
+DEBUG 2024-11-06 17:50:26,351 autoreload Watching dir /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates with glob **/*.
+DEBUG 2024-11-06 17:50:26,351 autoreload Watching dir /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/templates with glob **/*.
+DEBUG 2024-11-06 17:50:26,351 autoreload Watching dir /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/locale with glob **/*.mo.
+DEBUG 2024-11-06 17:50:26,352 autoreload Watching dir /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/locale with glob **/*.mo.
+DEBUG 2024-11-06 17:50:26,352 autoreload Watching dir /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/locale with glob **/*.mo.
+DEBUG 2024-11-06 17:50:26,392 utils (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2024-11-06 17:50:26,396 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/regex_helper.py first seen with mtime 1730154309.9590356
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/mail/__init__.py first seen with mtime 1730154309.880035
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/fields.py first seen with mtime 1730154309.9220352
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/models.py first seen with mtime 1730154309.9230354
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/constants.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:26,436 autoreload File /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/__init__.py first seen with mtime 1730154309.5020316
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/middleware.py first seen with mtime 1730154309.778034
+DEBUG 2024-11-06 17:50:26,436 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/inspect.py first seen with mtime 1730154309.9570355
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/__init__.py first seen with mtime 1730154309.9520357
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/tipo_servico.py first seen with mtime 1730243065.4516265
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/fields.py first seen with mtime 1730154309.5030315
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/utils.py first seen with mtime 1730154309.8700347
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/tempfile.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/datetime.py first seen with mtime 1730154309.9160352
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/email/encoders.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/platform.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/admin.py first seen with mtime 1730154309.453031
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/asyncio/constants.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/utils.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/multiprocessing/reduction.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/__init__.py first seen with mtime 1730156227.808909
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/queue.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /usr/lib/python3.12/shutil.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/exceptions.py first seen with mtime 1730154309.777034
+DEBUG 2024-11-06 17:50:26,437 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/operations/models.py first seen with mtime 1730154309.908035
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/tz.py first seen with mtime 1730154309.9480355
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/conf.py first seen with mtime 1730154309.9510355
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/http/multipartparser.py first seen with mtime 1730154309.9380355
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/asyncio/base_subprocess.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/asyncio.py first seen with mtime 1730154309.9530356
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/utils.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/opcode.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/glob.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/uploadedfile.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/json/scanner.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/asyncio/mixins.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/locale/__init__.py first seen with mtime 1730154309.210029
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/sysconfig.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/files.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/views/main.py first seen with mtime 1730154309.4100306
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/backends/__init__.py first seen with mtime 1730154309.873035
+DEBUG 2024-11-06 17:50:26,438 autoreload File /usr/lib/python3.12/email/mime/message.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,438 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/urls.py first seen with mtime 1730842458.3591459
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/email/_parseaddr.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/email/mime/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/zoneinfo/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/email/header.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/aggregates.py first seen with mtime 1730154309.908035
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/wsgi.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/tokens.py first seen with mtime 1729982439.5408387
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/asyncio/protocols.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/selectors.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/multiprocessing/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/backends/filebased.py first seen with mtime 1730154309.874035
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/re/_compiler.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/caches.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/boundfield.py first seen with mtime 1730154309.9210353
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/images.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/_os.py first seen with mtime 1730154309.9520357
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/static.py first seen with mtime 1730154309.9630356
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/decimal.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /usr/lib/python3.12/html/entities.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,439 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/sites.py first seen with mtime 1730154309.2930295
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/zoneinfo/_common.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/urls.py first seen with mtime 1730156227.814909
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/email/headerregistry.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/asyncio/transports.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/base_user.py first seen with mtime 1730154309.454031
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/lookups.py first seen with mtime 1730154309.9100351
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/async_checks.py first seen with mtime 1730154309.874035
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/operations/special.py first seen with mtime 1730154309.908035
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/smartif.py first seen with mtime 1730154309.9440355
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/servico_forma_contato.py first seen with mtime 1730915169.0072901
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/email/utils.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/encodings/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /usr/lib/python3.12/quopri.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/output.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/views.py first seen with mtime 1730154309.8700347
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/__init__.py first seen with mtime 1730154309.892035
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/exceptions.py first seen with mtime 1730154309.904035
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/utils.py first seen with mtime 1730154309.2940295
+DEBUG 2024-11-06 17:50:26,440 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/exceptions.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,441 autoreload File /usr/lib/python3.12/importlib/_abc.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,441 autoreload File /usr/lib/python3.12/datetime.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/operations/fields.py first seen with mtime 1730154309.907035
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/cache.py first seen with mtime 1730154309.9390354
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/exceptions.py first seen with mtime 1730154309.9430354
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/engine.py first seen with mtime 1730154309.9430354
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/tokens.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,441 autoreload File /usr/lib/python3.12/email/mime/text.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/checks.py first seen with mtime 1730154309.2910295
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/http/request.py first seen with mtime 1730154309.9380355
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/widgets.py first seen with mtime 1730154309.9230354
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/base_session.py first seen with mtime 1730154309.777034
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/decorators/__init__.py first seen with mtime 1730154309.9630356
+DEBUG 2024-11-06 17:50:26,441 autoreload File /usr/lib/python3.12/socket.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/client.py first seen with mtime 1730154309.902035
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/constants.py first seen with mtime 1730154309.9090352
+DEBUG 2024-11-06 17:50:26,441 autoreload File /usr/lib/python3.12/secrets.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py first seen with mtime 1730154309.778034
+DEBUG 2024-11-06 17:50:26,441 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/__init__.py first seen with mtime 1730154309.9510355
+DEBUG 2024-11-06 17:50:26,442 autoreload File /usr/lib/python3.12/tokenize.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/management/__init__.py first seen with mtime 1730154309.4990315
+DEBUG 2024-11-06 17:50:26,442 autoreload File /usr/lib/python3.12/asyncio/subprocess.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/security/__init__.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/models.py first seen with mtime 1730154309.2930295
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/models.py first seen with mtime 1730154309.5030315
+DEBUG 2024-11-06 17:50:26,442 autoreload File /usr/lib/python3.12/keyword.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loaders/cached.py first seen with mtime 1730154309.9460354
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/query.py first seen with mtime 1730154309.9120352
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/__init__.py first seen with mtime 1730154309.904035
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/mixins.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/deletion.py first seen with mtime 1730154309.9090352
+DEBUG 2024-11-06 17:50:26,442 autoreload File /usr/lib/python3.12/argparse.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/middleware.py first seen with mtime 1730154309.455031
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/__init__.py first seen with mtime 1730154309.9620357
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/filesystem.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/features.py first seen with mtime 1730154309.9030352
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/options.py first seen with mtime 1730154309.9110353
+DEBUG 2024-11-06 17:50:26,442 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/utils.py first seen with mtime 1730154309.9230354
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/multiprocessing/process.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/asyncio/taskgroups.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/typing.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/dispatch/dispatcher.py first seen with mtime 1730154309.9200354
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/agendamento.py first seen with mtime 1730243065.4516265
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/re/_casefix.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/query_utils.py first seen with mtime 1730154309.9120352
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/formsets.py first seen with mtime 1730154309.9220352
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/__init__.py first seen with mtime 1730154309.8710349
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/html/parser.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/_compat_pickle.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/tree.py first seen with mtime 1730154309.9600356
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/numbers.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/cli.py first seen with mtime 1729982439.5378387
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/signals.py first seen with mtime 1730154309.456031
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/uploadhandler.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/formatter.py first seen with mtime 1729982439.5378387
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/reindent.py first seen with mtime 1729982439.5408387
+DEBUG 2024-11-06 17:50:26,443 autoreload File /usr/lib/python3.12/asyncio/base_tasks.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,443 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/query.py first seen with mtime 1730154309.9190352
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/defaults.py first seen with mtime 1730154309.9620357
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/dateparse.py first seen with mtime 1730154309.9540355
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/__init__.py first seen with mtime 1730154309.9130352
+DEBUG 2024-11-06 17:50:26,444 autoreload File /usr/lib/python3.12/asyncio/log.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,444 autoreload File /usr/lib/python3.12/concurrent/futures/thread.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/compatibility/django_4_0.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/mixins.py first seen with mtime 1730154309.9140353
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/hashable.py first seen with mtime 1730154309.9570355
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/engine/filter_stack.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/apps.py first seen with mtime 1730156227.8139088
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/operations/__init__.py first seen with mtime 1730154309.907035
+DEBUG 2024-11-06 17:50:26,444 autoreload File /usr/lib/python3.12/concurrent/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,444 autoreload File /usr/lib/python3.12/pathlib.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/__init__.py first seen with mtime 1730154309.873035
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/apps.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/handlers/exception.py first seen with mtime 1730154309.880035
+DEBUG 2024-11-06 17:50:26,444 autoreload File /usr/lib/python3.12/types.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/dispatch/__init__.py first seen with mtime 1730154309.9200354
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/apps.py first seen with mtime 1730154309.777034
+DEBUG 2024-11-06 17:50:26,444 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/operations.py first seen with mtime 1730154309.894035
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/management/commands/runserver.py first seen with mtime 1730154309.8710349
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/apps.py first seen with mtime 1730154309.2910295
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/string.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/defaulttags.py first seen with mtime 1730154309.9420354
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/servers/__init__.py first seen with mtime 1730154309.891035
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sites/shortcuts.py first seen with mtime 1730154309.8280344
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/asyncio/futures.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/finders.py first seen with mtime 1730154309.8690348
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/asyncio/format_helpers.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/zoneinfo/_tzpath.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/autoreload.py first seen with mtime 1730154309.9530356
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/__init__.py first seen with mtime 1730154309.2090287
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/wsgiref/util.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/migration.py first seen with mtime 1730154309.905035
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/api.py first seen with mtime 1730154309.6810331
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/__init__.py first seen with mtime 1730154309.9410355
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/_markupbase.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /usr/lib/python3.12/fractions.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,445 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/__init__.py first seen with mtime 1730154309.902035
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/indexes.py first seen with mtime 1730154309.9100351
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/email/generator.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/security/base.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/email/feedparser.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/urllib/request.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/admin.py first seen with mtime 1730156227.8099089
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/base64.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/email/quoprimime.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/_weakrefset.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/utils.py first seen with mtime 1730154309.892035
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/pkgutil.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/http/client.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/shortcuts.py first seen with mtime 1730154309.2080288
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/encodings/aliases.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/textwrap.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/itercompat.py first seen with mtime 1730154309.9580357
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/base.py first seen with mtime 1730154309.9650357
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/window.py first seen with mtime 1730154309.9170353
+DEBUG 2024-11-06 17:50:26,446 autoreload File /usr/lib/python3.12/_compression.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,446 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sites/requests.py first seen with mtime 1730154309.8280344
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/__init__.py first seen with mtime 1730154309.9160352
+DEBUG 2024-11-06 17:50:26,447 autoreload File /usr/lib/python3.12/logging/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/files.py first seen with mtime 1730154309.9130352
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/renderers.py first seen with mtime 1730154309.9230354
+DEBUG 2024-11-06 17:50:26,447 autoreload File /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/checks.py first seen with mtime 1730154309.454031
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/management/commands/__init__.py first seen with mtime 1730154309.8700347
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/dates.py first seen with mtime 1730154309.9650357
+DEBUG 2024-11-06 17:50:26,447 autoreload File /usr/lib/python3.12/asyncio/locks.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/urls.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/base.py first seen with mtime 1730154309.9410355
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/cliente.py first seen with mtime 1730913269.0318644
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py first seen with mtime 1730154309.8690348
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/list.py first seen with mtime 1730154309.9650357
+DEBUG 2024-11-06 17:50:26,447 autoreload File /usr/lib/python3.12/wsgiref/headers.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,447 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/serializers/python.py first seen with mtime 1730154309.890035
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/debug.py first seen with mtime 1730154309.9620357
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/widgets.py first seen with mtime 1730154309.2940295
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/response.py first seen with mtime 1730154309.9440355
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/_functions.py first seen with mtime 1730154309.902035
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py first seen with mtime 1730154309.4080305
+DEBUG 2024-11-06 17:50:26,448 autoreload File /usr/lib/python3.12/email/policy.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,448 autoreload File /etc/python3.12/sitecustomize.py first seen with mtime 1712727227.0
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/lava_jato/settings.py first seen with mtime 1730915417.5071611
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/checks.py first seen with mtime 1730154309.5030315
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/storage/base.py first seen with mtime 1730154309.6830332
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py first seen with mtime 1730154309.9150352
+DEBUG 2024-11-06 17:50:26,448 autoreload File /usr/lib/python3.12/concurrent/futures/_base.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,448 autoreload File /usr/lib/python3.12/calendar.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/cache.py first seen with mtime 1730154309.9530356
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/signals.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/introspection.py first seen with mtime 1730154309.9030352
+DEBUG 2024-11-06 17:50:26,448 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/where.py first seen with mtime 1730154309.9200354
+DEBUG 2024-11-06 17:50:26,448 autoreload File /usr/lib/python3.12/wsgiref/handlers.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/forma_contato.py first seen with mtime 1730243065.4516265
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/__init__.py first seen with mtime 1730154309.9640357
+DEBUG 2024-11-06 17:50:26,449 autoreload File /usr/lib/python3.12/urllib/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loader_tags.py first seen with mtime 1730154309.9440355
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/__init__.py first seen with mtime 1730154309.9170353
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/__init__.py first seen with mtime 1730156227.812909
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/schema.py first seen with mtime 1730154309.9030352
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/backends/__init__.py first seen with mtime 1730154309.778034
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/storage/__init__.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/duration.py first seen with mtime 1730154309.9560356
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/operations.py first seen with mtime 1730154309.9030352
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/enums.py first seen with mtime 1730154309.9100351
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/converters.py first seen with mtime 1730154309.9510355
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/decorators/debug.py first seen with mtime 1730154309.9640357
+DEBUG 2024-11-06 17:50:26,449 autoreload File /usr/lib/python3.12/linecache.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,449 autoreload File /usr/lib/python3.12/bisect.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,449 autoreload File /usr/lib/python3.12/reprlib.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,449 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py first seen with mtime 1730154309.8690348
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/lib-dynload/termios.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/gzip.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/messages.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/related.py first seen with mtime 1730154309.9140353
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/email/mime/multipart.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/warnings.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/asyncio/timeouts.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loader.py first seen with mtime 1730154309.9430354
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_urls.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/features.py first seen with mtime 1730154309.893035
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/_sysconfigdata__x86_64-linux-gnu.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/pprint.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/security/csrf.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/utils.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/termcolors.py first seen with mtime 1730154309.9590356
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/models.py first seen with mtime 1730154309.456031
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loaders/filesystem.py first seen with mtime 1730154309.9460354
+DEBUG 2024-11-06 17:50:26,450 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/apps/__init__.py first seen with mtime 1730154309.2080288
+DEBUG 2024-11-06 17:50:26,450 autoreload File /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /usr/lib/python3.12/enum.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/__init__.py first seen with mtime 1730154309.4080305
+DEBUG 2024-11-06 17:50:26,451 autoreload File /usr/lib/python3.12/difflib.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/tipo_veiculo.py first seen with mtime 1730243065.4516265
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/comparison.py first seen with mtime 1730154309.9160352
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/serializers/base.py first seen with mtime 1730154309.889035
+DEBUG 2024-11-06 17:50:26,451 autoreload File /usr/lib/python3.12/locale.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/apps/registry.py first seen with mtime 1730154309.2080288
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/utils.py first seen with mtime 1730154309.9060352
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/apps.py first seen with mtime 1730154309.453031
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_modify.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/__init__.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/forms.py first seen with mtime 1730154309.455031
+DEBUG 2024-11-06 17:50:26,451 autoreload File /usr/lib/python3.12/inspect.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/management/__init__.py first seen with mtime 1730154309.882035
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/base.py first seen with mtime 1730154309.893035
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/views/__init__.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,451 autoreload File /usr/lib/python3.12/subprocess.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/__init__.py first seen with mtime 1730243065.4516265
+DEBUG 2024-11-06 17:50:26,451 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/related_lookups.py first seen with mtime 1730154309.9150352
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/management/commands/__init__.py first seen with mtime 1730154309.883035
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/filters.py first seen with mtime 1730154309.2920296
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/handlers/wsgi.py first seen with mtime 1730154309.880035
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/manage.py first seen with mtime 1730243065.4506264
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/handlers/base.py first seen with mtime 1730154309.880035
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/subqueries.py first seen with mtime 1730154309.9200354
+DEBUG 2024-11-06 17:50:26,452 autoreload File /usr/lib/python3.12/email/charset.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/http.py first seen with mtime 1730154309.9570355
+DEBUG 2024-11-06 17:50:26,452 autoreload File /usr/lib/python3.12/encodings/utf_8.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/exceptions.py first seen with mtime 1730154309.2920296
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/__init__.py first seen with mtime 1730154309.453031
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/i18n.py first seen with mtime 1730154309.9630356
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/asgiref/__init__.py first seen with mtime 1729982439.5878384
+DEBUG 2024-11-06 17:50:26,452 autoreload File /usr/lib/python3.12/asyncio/base_events.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/resolvers.py first seen with mtime 1730154309.9520357
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/engine/grouping.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/dates.py first seen with mtime 1730154309.9550357
+DEBUG 2024-11-06 17:50:26,452 autoreload File /usr/lib/python3.12/asyncio/unix_events.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,452 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/deconstruct.py first seen with mtime 1730154309.9550357
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/timezone.py first seen with mtime 1730154309.9600356
+DEBUG 2024-11-06 17:50:26,453 autoreload File /usr/lib/python3.12/re/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/functional.py first seen with mtime 1730154309.9560356
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/engine/__init__.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/__init__.py first seen with mtime 1730154309.777034
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/context.py first seen with mtime 1730154309.9420354
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/math.py first seen with mtime 1730154309.9160352
+DEBUG 2024-11-06 17:50:26,453 autoreload File /usr/lib/python3.12/asyncio/queues.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/views/autocomplete.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/middleware.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/management/base.py first seen with mtime 1730154309.883035
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/checks.py first seen with mtime 1730154309.8690348
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/introspection.py first seen with mtime 1730154309.893035
+DEBUG 2024-11-06 17:50:26,453 autoreload File /usr/lib/python3.12/copyreg.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/base.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,453 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/temp.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,453 autoreload File /usr/lib/python3.12/urllib/response.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/creation.py first seen with mtime 1730154309.9030352
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/decorators.py first seen with mtime 1730154309.2920296
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/asgiref/local.py first seen with mtime 1729982439.5888383
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/apps/config.py first seen with mtime 1730154309.2080288
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/__init__.py first seen with mtime 1730154309.908035
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/others.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/json/decoder.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/options.py first seen with mtime 1730154309.2930295
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/database.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/utils.py first seen with mtime 1730154309.9120352
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/connection.py first seen with mtime 1730154309.9540355
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/socketserver.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/sqlite3/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/statistics.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/traceback.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/i18n.py first seen with mtime 1730154309.9470356
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/__init__.py first seen with mtime 1730154309.9390354
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/functools.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /usr/lib/python3.12/fnmatch.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,454 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/crypto.py first seen with mtime 1730154309.9540355
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/validators.py first seen with mtime 1730154309.457031
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/admin.py first seen with mtime 1730154309.5020316
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/detail.py first seen with mtime 1730154309.9650357
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/exceptions.py first seen with mtime 1729982439.5378387
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/log.py first seen with mtime 1730154309.9580357
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/json/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/collections/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/asgiref/sync.py first seen with mtime 1729982439.5888383
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/validation.py first seen with mtime 1730154309.894035
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/http/cookies.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/utils.py first seen with mtime 1730154309.873035
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/datastructures.py first seen with mtime 1730154309.9190352
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/heapq.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,455 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/backends/__init__.py first seen with mtime 1730154309.9450355
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/lzma.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,455 autoreload File /usr/lib/python3.12/token.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /usr/lib/python3.12/email/contentmanager.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/formats.py first seen with mtime 1730154309.9560356
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/compatibility/__init__.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,456 autoreload File /usr/lib/python3.12/ipaddress.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/ddl_references.py first seen with mtime 1730154309.892035
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/lava_jato/__init__.py first seen with mtime 1730156227.8079088
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/lorem_ipsum.py first seen with mtime 1730154309.9580357
+DEBUG 2024-11-06 17:50:26,456 autoreload File /usr/lib/python3.12/bz2.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/__init__.py first seen with mtime 1730154309.8780348
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/paginator.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/encoding.py first seen with mtime 1730154309.9560356
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/defaultfilters.py first seen with mtime 1730154309.9420354
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/servers/basehttp.py first seen with mtime 1730154309.891035
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/module_loading.py first seen with mtime 1730154309.9580357
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/safestring.py first seen with mtime 1730154309.9590356
+DEBUG 2024-11-06 17:50:26,456 autoreload File /usr/lib/python3.12/asyncio/base_futures.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /usr/lib/python3.12/asyncio/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,456 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/registry.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/client.py first seen with mtime 1730154309.893035
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/dateformat.py first seen with mtime 1730154309.9540355
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/management/color.py first seen with mtime 1730154309.883035
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/__init__.py first seen with mtime 1730154309.2910295
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loaders/app_directories.py first seen with mtime 1730154309.9460354
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/__init__.py first seen with mtime 1729982439.5378387
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/operations/base.py first seen with mtime 1730154309.907035
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/state.py first seen with mtime 1730154309.9060352
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/logging/config.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/re/_constants.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/asyncio/exceptions.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/asyncio/staggered.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/text.py first seen with mtime 1730154309.9590356
+DEBUG 2024-11-06 17:50:26,457 autoreload File /usr/lib/python3.12/email/iterators.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/security/sessions.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,457 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/proxy.py first seen with mtime 1730154309.9140353
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/email/parser.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/csrf.py first seen with mtime 1730154309.9400353
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/__init__.py first seen with mtime 1730154309.2910295
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/importlib/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/backends.py first seen with mtime 1730154309.453031
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/contextlib.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/wsgiref/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/asyncio/runners.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/gettext.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/constants.py first seen with mtime 1730154309.9180353
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/logging/handlers.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/email/message.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/http/__init__.py first seen with mtime 1730154309.9380355
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/asyncio/trsock.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py first seen with mtime 1730154309.902035
+DEBUG 2024-11-06 17:50:26,458 autoreload File /usr/lib/python3.12/pickle.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/global_settings.py first seen with mtime 1730154309.2090287
+DEBUG 2024-11-06 17:50:26,458 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/keywords.py first seen with mtime 1729982439.5378387
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/asyncio/sslproto.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/management/commands/runserver.py first seen with mtime 1730154309.887035
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/dis.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/sql.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/backends/base.py first seen with mtime 1730154309.873035
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/__init__.py first seen with mtime 1730154309.2070289
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/__init__.py first seen with mtime 1730154309.9470356
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/signals.py first seen with mtime 1730154309.9120352
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/autoreload.py first seen with mtime 1730154309.9410355
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/contextvars.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/asyncio/events.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/asyncio/coroutines.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/static.py first seen with mtime 1730154309.9480355
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/text.py first seen with mtime 1730154309.9170353
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/concurrent/futures/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/engine/statement_splitter.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,459 autoreload File /usr/lib/python3.12/email/_policybase.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,459 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/decorators/cache.py first seen with mtime 1730154309.9630356
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/ssl.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/deprecation.py first seen with mtime 1730154309.9550357
+DEBUG 2024-11-06 17:50:26,460 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/manager.py first seen with mtime 1730154309.9110353
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/json/encoder.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/asyncio/tasks.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/html/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/templates.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,460 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/serializers/__init__.py first seen with mtime 1730154309.889035
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/getpass.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /usr/lib/python3.12/hashlib.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,460 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/__init__.py first seen with mtime 1730154309.874035
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/templatetags/log.py first seen with mtime 1730154309.4090307
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/signing.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,461 autoreload File /usr/lib/python3.12/email/base64mime.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/ipv6.py first seen with mtime 1730154309.9570355
+DEBUG 2024-11-06 17:50:26,461 autoreload File /usr/lib/python3.12/email/_encoded_words.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,461 autoreload File /usr/lib/python3.12/sqlite3/dbapi2.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,461 autoreload File /usr/lib/python3.12/asyncio/streams.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/numberformat.py first seen with mtime 1730154309.9590356
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/mail/message.py first seen with mtime 1730154309.8810349
+DEBUG 2024-11-06 17:50:26,461 autoreload File /usr/lib/python3.12/multiprocessing/context.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/library.py first seen with mtime 1730154309.9430354
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/reverse_related.py first seen with mtime 1730154309.9150352
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loaders/base.py first seen with mtime 1730154309.9460354
+DEBUG 2024-11-06 17:50:26,461 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/decorators/common.py first seen with mtime 1730154309.9630356
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/signal.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/wsgiref/simple_server.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/exceptions.py first seen with mtime 1730154309.9510355
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/__init__.py first seen with mtime 1730154309.891035
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/__init__.py first seen with mtime 1730154309.6810331
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/timesince.py first seen with mtime 1730154309.9600356
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/version.py first seen with mtime 1730154309.9600356
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/http/response.py first seen with mtime 1730154309.9390354
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/email/mime/base.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/http/server.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/mail/utils.py first seen with mtime 1730154309.8810349
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/apps.py first seen with mtime 1730234309.5296583
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/asyncio/threads.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /usr/lib/python3.12/urllib/error.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/html.py first seen with mtime 1730154309.9570355
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/translation/__init__.py first seen with mtime 1730154309.9610357
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/aligned_indent.py first seen with mtime 1729982439.5398388
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/models.py first seen with mtime 1730156227.8139088
+DEBUG 2024-11-06 17:50:26,462 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/generic/edit.py first seen with mtime 1730154309.9650357
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/struct.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/expressions.py first seen with mtime 1730154309.9100351
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/__init__.py first seen with mtime 1730154309.892035
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/utils.py first seen with mtime 1730154309.891035
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/tokens.py first seen with mtime 1730154309.456031
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/re/_parser.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/dataclasses.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/copy.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/lexer.py first seen with mtime 1729982439.5388389
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/email/errors.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/asgiref/current_thread_executor.py first seen with mtime 1729982439.5878384
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/uuid.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/base.py first seen with mtime 1730154309.9510355
+DEBUG 2024-11-06 17:50:26,463 autoreload File /usr/lib/python3.12/ast.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,463 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/__init__.py first seen with mtime 1730154309.9210353
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/models.py first seen with mtime 1730154309.778034
+DEBUG 2024-11-06 17:50:26,464 autoreload File /usr/lib/python3.12/email/_header_value_parser.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,464 autoreload File /usr/lib/python3.12/weakref.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sites/__init__.py first seen with mtime 1730154309.8270345
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/model_checks.py first seen with mtime 1730154309.8750348
+DEBUG 2024-11-06 17:50:26,464 autoreload File /usr/lib/python3.12/email/mime/nonmultipart.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,464 autoreload File /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/handlers/asgi.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,464 autoreload File /usr/lib/python3.12/mimetypes.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/forms.py first seen with mtime 1730154309.5030315
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/base.py first seen with mtime 1730154309.9090352
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/constraints.py first seen with mtime 1730154309.9090352
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/views.py first seen with mtime 1730156227.814909
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/locks.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/decorators.py first seen with mtime 1730154309.9550357
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/models/servico.py first seen with mtime 1730915153.2810702
+DEBUG 2024-11-06 17:50:26,464 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/http/cookie.py first seen with mtime 1730154309.9380355
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/password_validation.py first seen with mtime 1730154309.456031
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/datastructures.py first seen with mtime 1730154309.9540355
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/hashers.py first seen with mtime 1730154309.455031
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/handlers/__init__.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/l10n.py first seen with mtime 1730154309.9480355
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/apps.py first seen with mtime 1730154309.5020316
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/backends/django.py first seen with mtime 1730154309.9450355
+DEBUG 2024-11-06 17:50:26,465 autoreload File /usr/lib/python3.12/operator.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,465 autoreload File /usr/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/management/__init__.py first seen with mtime 1730154309.5410318
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/validators.py first seen with mtime 1730154309.8720348
+DEBUG 2024-11-06 17:50:26,465 autoreload File /usr/lib/python3.12/random.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,465 autoreload File /usr/lib/python3.12/email/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/handler.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/templatetags/cache.py first seen with mtime 1730154309.9470356
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/checks/translation.py first seen with mtime 1730154309.876035
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/helpers.py first seen with mtime 1730154309.2920296
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/schema.py first seen with mtime 1730154309.894035
+DEBUG 2024-11-06 17:50:26,465 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/management/__init__.py first seen with mtime 1730154309.8700347
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/signals.py first seen with mtime 1730154309.892035
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/base.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/backends/base.py first seen with mtime 1730154309.9450355
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/transaction.py first seen with mtime 1730154309.891035
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/common.py first seen with mtime 1730154309.9400353
+DEBUG 2024-11-06 17:50:26,466 autoreload File /usr/lib/python3.12/hmac.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/functions/mixins.py first seen with mtime 1730154309.9170353
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/translation/reloader.py first seen with mtime 1730154309.9610357
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/translation/trans_real.py first seen with mtime 1730154309.9620357
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/move.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,466 autoreload File /usr/lib/python3.12/collections/abc.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/views.py first seen with mtime 1730915260.5448914
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/urls/__init__.py first seen with mtime 1730154309.2900295
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/actions.py first seen with mtime 1730154309.2910295
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/decorators/csrf.py first seen with mtime 1730154309.9640357
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/utils.py first seen with mtime 1730154309.9440355
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/serializers/json.py first seen with mtime 1730154309.890035
+DEBUG 2024-11-06 17:50:26,466 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/security.py first seen with mtime 1730154309.9410355
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/admin.py first seen with mtime 1730156227.812909
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/threading.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/asyncio/selector_events.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/urls/utils.py first seen with mtime 1730154309.9520357
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/__init__.py first seen with mtime 1730154309.877035
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/forms/forms.py first seen with mtime 1730154309.9220352
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/base/creation.py first seen with mtime 1730154309.893035
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/sqlparse/filters/right_margin.py first seen with mtime 1729982439.5408387
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/__init__.py first seen with mtime 1730154309.8680348
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/utils/topological_sort.py first seen with mtime 1730154309.9600356
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/loaders/__init__.py first seen with mtime 1730154309.9460354
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/fields/json.py first seen with mtime 1730154309.9140353
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/lava_jato/urls.py first seen with mtime 1730156227.808909
+DEBUG 2024-11-06 17:50:26,467 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/files/storage/memory.py first seen with mtime 1730154309.879035
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/urllib/parse.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,467 autoreload File /usr/lib/python3.12/http/__init__.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources first seen with mtime 1730842458.3571458
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/site first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/scheduling first seen with mtime 1730842458.3541458
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/customer first seen with mtime 1730842458.352146
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/business_intelligence first seen with mtime 1730842458.3511457
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_vehicle first seen with mtime 1730842458.358146
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/service first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/home first seen with mtime 1730842458.3531458
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/base.html first seen with mtime 1730842458.3511457
+DEBUG 2024-11-06 17:50:26,468 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_service first seen with mtime 1730842458.3561459
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/site/site_edit.html first seen with mtime 1730842458.3561459
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/scheduling/manager_scheduling.html first seen with mtime 1730842458.3541458
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/scheduling/edit_scheduling.html first seen with mtime 1730842458.3541458
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/scheduling/register_scheduling.html first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/customer/edit_customer.html first seen with mtime 1730842458.352146
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/customer/manager_customer.html first seen with mtime 1730844376.6912882
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/customer/register_customer.html first seen with mtime 1730842458.3531458
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/business_intelligence/bi_report.html first seen with mtime 1730842458.3511457
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/business_intelligence/bi_analysis.html first seen with mtime 1730842458.3511457
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_vehicle/manager_type_vehicle.html first seen with mtime 1730842458.3571458
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_vehicle/edit_type_vehicle.html first seen with mtime 1730842458.3571458
+DEBUG 2024-11-06 17:50:26,469 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_vehicle/register_type_vehicle.html first seen with mtime 1730842458.358146
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/service/manager_service.html first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/service/register_service.html first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/service/edit_service.html first seen with mtime 1730842458.355146
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/home/dashboard.html first seen with mtime 1730842458.3531458
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_service/manager_type_service.html first seen with mtime 1730842458.3561459
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_service/edit_type_service.html first seen with mtime 1730842458.3561459
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/templates/resources/type_service/register_type_service.html first seen with mtime 1730842458.3571458
+DEBUG 2024-11-06 17:50:26,470 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/templates/resources first seen with mtime 1730156227.814909
+DEBUG 2024-11-06 17:50:26,471 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/templates/resources/home.html first seen with mtime 1730156227.814909
+DEBUG 2024-11-06 17:50:27,533 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0003_alter_user_email_max_length.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,533 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0002_alter_permission_name_max_length.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,533 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py first seen with mtime 1730154309.779034
+DEBUG 2024-11-06 17:50:27,533 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0009_alter_user_last_name_max_length.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,533 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/migrations/0001_initial.py first seen with mtime 1730154309.5420318
+DEBUG 2024-11-06 17:50:27,534 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/migrations/0001_initial.py first seen with mtime 1730844704.9706256
+DEBUG 2024-11-06 17:50:27,534 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0005_alter_user_last_login_null.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,535 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/migrations/0003_logentry_add_action_flag_choices.py first seen with mtime 1730154309.3770304
+DEBUG 2024-11-06 17:50:27,535 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0007_alter_validators_add_error_messages.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,535 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/migrations/0001_initial.py first seen with mtime 1730154309.3770304
+DEBUG 2024-11-06 17:50:27,535 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/private_site/migrations/__init__.py first seen with mtime 1730156227.8099089
+DEBUG 2024-11-06 17:50:27,535 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0004_alter_user_username_opts.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,536 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0008_alter_user_username_max_length.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,536 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/migrations/0002_remove_content_type_name.py first seen with mtime 1730154309.5420318
+DEBUG 2024-11-06 17:50:27,536 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0011_update_proxy_permissions.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,536 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0012_alter_user_first_name_max_length.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,537 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/recorder.py first seen with mtime 1730154309.9060352
+DEBUG 2024-11-06 17:50:27,537 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/public_site/migrations/__init__.py first seen with mtime 1730156227.8139088
+DEBUG 2024-11-06 17:50:27,537 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/migrations/__init__.py first seen with mtime 1730154309.8250344
+DEBUG 2024-11-06 17:50:27,537 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/views/csrf.py first seen with mtime 1730154309.9620357
+DEBUG 2024-11-06 17:50:27,538 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/migrations/__init__.py first seen with mtime 1730154309.3780303
+DEBUG 2024-11-06 17:50:27,538 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/executor.py first seen with mtime 1730154309.905035
+DEBUG 2024-11-06 17:50:27,538 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/middleware/clickjacking.py first seen with mtime 1730154309.9390354
+DEBUG 2024-11-06 17:50:27,538 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/migrations/0001_initial.py first seen with mtime 1730154309.8250344
+DEBUG 2024-11-06 17:50:27,538 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/loader.py first seen with mtime 1730154309.905035
+DEBUG 2024-11-06 17:50:27,539 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/core/cache/backends/locmem.py first seen with mtime 1730154309.874035
+DEBUG 2024-11-06 17:50:27,539 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/admin/migrations/0002_logentry_remove_auto_add.py first seen with mtime 1730154309.3770304
+DEBUG 2024-11-06 17:50:27,539 autoreload File /usr/lib/python3.12/stringprep.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:27,539 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0010_alter_group_name_max_length.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,539 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/models/sql/compiler.py first seen with mtime 1730154309.9180353
+DEBUG 2024-11-06 17:50:27,540 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/contenttypes/migrations/__init__.py first seen with mtime 1730154309.5420318
+DEBUG 2024-11-06 17:50:27,540 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0006_require_contenttypes_0002.py first seen with mtime 1730154309.5000315
+DEBUG 2024-11-06 17:50:27,540 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/0001_initial.py first seen with mtime 1730154309.4990315
+DEBUG 2024-11-06 17:50:27,540 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/lava_jato/wsgi.py first seen with mtime 1730156227.808909
+DEBUG 2024-11-06 17:50:27,541 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/migrations/__init__.py first seen with mtime 1730154309.5010314
+DEBUG 2024-11-06 17:50:27,541 autoreload File /usr/lib/python3.12/encodings/idna.py first seen with mtime 1726064257.0
+DEBUG 2024-11-06 17:50:27,541 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/migrations/graph.py first seen with mtime 1730154309.905035
+DEBUG 2024-11-06 17:50:47,141 utils (0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:47,141 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:47,143 utils (0.001) SELECT COUNT(*) AS `__count` FROM `cliente`; args=(); alias=mysql_db
+DEBUG 2024-11-06 17:50:47,157 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` LIMIT 5; args=(); alias=mysql_db
+INFO 2024-11-06 17:50:47,161 basehttp "GET /admin/customer/manager_customer/ HTTP/1.1" 200 7356
+DEBUG 2024-11-06 17:50:47,811 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/schema.py first seen with mtime 1730154309.8970351
+DEBUG 2024-11-06 17:50:47,811 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/compiler.py first seen with mtime 1730154309.896035
+DEBUG 2024-11-06 17:50:47,812 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/introspection.py first seen with mtime 1730154309.8970351
+DEBUG 2024-11-06 17:50:47,812 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/sessions/serializers.py first seen with mtime 1730154309.778034
+DEBUG 2024-11-06 17:50:47,812 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/storage/session.py first seen with mtime 1730154309.6830332
+DEBUG 2024-11-06 17:50:47,812 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/storage/cookie.py first seen with mtime 1730154309.6830332
+DEBUG 2024-11-06 17:50:47,813 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/storage/fallback.py first seen with mtime 1730154309.6830332
+DEBUG 2024-11-06 17:50:47,813 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/connections.py first seen with mtime 1730233075.4321342
+DEBUG 2024-11-06 17:50:47,813 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/template/context_processors.py first seen with mtime 1730154309.9420354
+DEBUG 2024-11-06 17:50:47,813 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/locale/en/formats.py first seen with mtime 1730154309.225029
+DEBUG 2024-11-06 17:50:47,813 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/constants/FLAG.py first seen with mtime 1730233075.434134
+DEBUG 2024-11-06 17:50:47,814 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/client.py first seen with mtime 1730154309.896035
+DEBUG 2024-11-06 17:50:47,814 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/features.py first seen with mtime 1730154309.896035
+DEBUG 2024-11-06 17:50:47,814 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/_mysql.cpython-312-x86_64-linux-gnu.so first seen with mtime 1730233075.4321342
+DEBUG 2024-11-06 17:50:47,814 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/constants/CLIENT.py first seen with mtime 1730233075.433134
+DEBUG 2024-11-06 17:50:47,814 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/times.py first seen with mtime 1730233075.433134
+DEBUG 2024-11-06 17:50:47,815 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/base.py first seen with mtime 1730154309.895035
+DEBUG 2024-11-06 17:50:47,815 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/__init__.py first seen with mtime 1730233075.430134
+DEBUG 2024-11-06 17:50:47,815 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/operations.py first seen with mtime 1730154309.8970351
+DEBUG 2024-11-06 17:50:47,815 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/cursors.py first seen with mtime 1730233075.4321342
+DEBUG 2024-11-06 17:50:47,815 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/conf/locale/en/__init__.py first seen with mtime 1730154309.225029
+DEBUG 2024-11-06 17:50:47,816 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/constants/__init__.py first seen with mtime 1730233075.434134
+DEBUG 2024-11-06 17:50:47,816 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/constants/FIELD_TYPE.py first seen with mtime 1730233075.433134
+DEBUG 2024-11-06 17:50:47,816 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/__init__.py first seen with mtime 1730154309.895035
+DEBUG 2024-11-06 17:50:47,816 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/validation.py first seen with mtime 1730154309.8970351
+DEBUG 2024-11-06 17:50:47,816 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/release.py first seen with mtime 1730233075.433134
+DEBUG 2024-11-06 17:50:47,817 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/staticfiles/storage.py first seen with mtime 1730154309.8690348
+DEBUG 2024-11-06 17:50:47,817 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/_exceptions.py first seen with mtime 1730233075.430134
+DEBUG 2024-11-06 17:50:47,817 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/auth/context_processors.py first seen with mtime 1730154309.454031
+DEBUG 2024-11-06 17:50:47,817 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/db/backends/mysql/creation.py first seen with mtime 1730154309.896035
+DEBUG 2024-11-06 17:50:47,818 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/django/contrib/messages/context_processors.py first seen with mtime 1730154309.682033
+DEBUG 2024-11-06 17:50:47,818 autoreload File /home/achcarlucas/Documentos/lucas/univesp/pi2_univesp/lava_jato/lava_jato/routers.py first seen with mtime 1730243065.4506264
+DEBUG 2024-11-06 17:50:47,818 autoreload File /home/achcarlucas/univesp_env/lib/python3.12/site-packages/MySQLdb/converters.py first seen with mtime 1730233075.4321342
+DEBUG 2024-11-06 17:50:49,959 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:49,960 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,962 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (2); args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,964 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,965 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,967 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,970 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,972 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,974 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,976 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,977 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,978 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,980 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,981 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:50:49,982 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+ERROR 2024-11-06 17:50:49,983 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 10 para Holly Reid com agendamento 10>, <Servico: Serviço 3 para Holly Reid com agendamento 5>, <Servico: Serviço 7 para Holly Reid com agendamento 10>})
+INFO 2024-11-06 17:50:49,984 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
+DEBUG 2024-11-06 17:50:51,754 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:51,755 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 4 LIMIT 21; args=(4,); alias=mysql_db
+DEBUG 2024-11-06 17:50:51,757 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (4); args=(4,); alias=mysql_db
+DEBUG 2024-11-06 17:50:51,758 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 4 LIMIT 21; args=(4,); alias=mysql_db
+DEBUG 2024-11-06 17:50:51,759 utils (0.000) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 4 LIMIT 21; args=(4,); alias=mysql_db
+DEBUG 2024-11-06 17:50:51,761 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 4 LIMIT 21; args=(4,); alias=mysql_db
+DEBUG 2024-11-06 17:50:51,763 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 9 LIMIT 21; args=(9,); alias=mysql_db
+ERROR 2024-11-06 17:50:51,764 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 4 para John Smith com agendamento 9>})
+INFO 2024-11-06 17:50:51,765 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
+DEBUG 2024-11-06 17:50:53,555 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:53,556 utils (0.000) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:53,557 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (5); args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:53,558 utils (0.000) BEGIN; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:53,559 utils (0.001) DELETE FROM `cliente` WHERE `cliente`.`id` IN (5); args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:54,280 utils (0.720) COMMIT; args=None; alias=mysql_db
+INFO 2024-11-06 17:50:54,281 views cliente 5 removido com sucesso
+INFO 2024-11-06 17:50:54,282 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 84
+DEBUG 2024-11-06 17:50:56,311 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:56,312 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,315 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (6); args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,317 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 8 LIMIT 21; args=(8,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,319 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,322 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 8 LIMIT 21; args=(8,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,323 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 1 LIMIT 21; args=(1,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,325 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 9 LIMIT 21; args=(9,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,326 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,328 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 9 LIMIT 21; args=(9,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,330 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,332 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,333 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,334 utils (0.000) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,335 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,366 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,368 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,369 utils (0.000) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:50:56,371 utils (0.000) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 8 LIMIT 21; args=(8,); alias=mysql_db
+ERROR 2024-11-06 17:50:56,371 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 8 para April Leon com agendamento 1>, <Servico: Serviço 9 para April Leon com agendamento 3>, <Servico: Serviço 2 para April Leon com agendamento 2>, <Servico: Serviço 5 para April Leon com agendamento 8>})
+INFO 2024-11-06 17:50:56,371 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
+DEBUG 2024-11-06 17:50:57,839 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:50:57,840 utils (0.000) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:50:57,841 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (7); args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:50:57,844 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:57,845 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:50:57,847 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:50:57,849 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 8 LIMIT 21; args=(8,); alias=mysql_db
+ERROR 2024-11-06 17:50:57,849 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 6 para Stephanie Grant com agendamento 8>})
+INFO 2024-11-06 17:50:57,849 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 194
+DEBUG 2024-11-06 17:51:15,844 utils (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:51:15,847 utils (0.003) SELECT COUNT(*) AS `__count` FROM `cliente`; args=(); alias=mysql_db
+DEBUG 2024-11-06 17:51:15,850 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` LIMIT 4; args=(); alias=mysql_db
+INFO 2024-11-06 17:51:15,852 basehttp "GET /admin/customer/manager_customer/ HTTP/1.1" 200 6707
+DEBUG 2024-11-06 17:51:20,040 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:51:20,044 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:20,046 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (7); args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:20,048 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:51:20,050 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:20,052 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 6 LIMIT 21; args=(6,); alias=mysql_db
+DEBUG 2024-11-06 17:51:20,053 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 8 LIMIT 21; args=(8,); alias=mysql_db
+ERROR 2024-11-06 17:51:20,054 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 6 para Stephanie Grant com agendamento 8>})
+INFO 2024-11-06 17:51:20,055 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 194
+DEBUG 2024-11-06 17:51:34,614 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:51:34,615 utils (0.000) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,617 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (2); args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,618 utils (0.000) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,619 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,621 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,622 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,623 utils (0.000) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,625 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,627 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,628 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,629 utils (0.000) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,630 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,632 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:34,634 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+ERROR 2024-11-06 17:51:34,634 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 10 para Holly Reid com agendamento 10>, <Servico: Serviço 3 para Holly Reid com agendamento 5>, <Servico: Serviço 7 para Holly Reid com agendamento 10>})
+INFO 2024-11-06 17:51:34,635 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
+DEBUG 2024-11-06 17:51:43,562 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:51:43,563 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,565 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (2); args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,566 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,567 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,569 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,571 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,572 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,574 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,576 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,577 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,579 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,581 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,582 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:43,584 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+ERROR 2024-11-06 17:51:43,584 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 10 para Holly Reid com agendamento 10>, <Servico: Serviço 3 para Holly Reid com agendamento 5>, <Servico: Serviço 7 para Holly Reid com agendamento 10>})
+INFO 2024-11-06 17:51:43,585 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
+DEBUG 2024-11-06 17:51:49,507 utils (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=mysql_db
+DEBUG 2024-11-06 17:51:49,508 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,510 utils (0.001) SELECT `servico`.`id` FROM `servico` WHERE `servico`.`cliente_id` IN (2); args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,512 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,513 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,515 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,517 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,519 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,520 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,522 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 3 LIMIT 21; args=(3,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,524 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 5 LIMIT 21; args=(5,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,526 utils (0.001) SELECT `servico`.`id`, `servico`.`cliente_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,528 utils (0.001) SELECT `cliente`.`id`, `cliente`.`nome`, `cliente`.`placa_carro`, `cliente`.`email_contato_1`, `cliente`.`email_contato_2`, `cliente`.`telefone_contato_1`, `cliente`.`telefone_contato_2` FROM `cliente` WHERE `cliente`.`id` = 2 LIMIT 21; args=(2,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,530 utils (0.001) SELECT `servico`.`id`, `servico`.`agendamento_id` FROM `servico` WHERE `servico`.`id` = 7 LIMIT 21; args=(7,); alias=mysql_db
+DEBUG 2024-11-06 17:51:49,532 utils (0.001) SELECT `agendamento`.`id`, `agendamento`.`datetime_inicio`, `agendamento`.`datetime_fim`, `agendamento`.`disponivel` FROM `agendamento` WHERE `agendamento`.`id` = 10 LIMIT 21; args=(10,); alias=mysql_db
+ERROR 2024-11-06 17:51:49,532 views ProtectedError("Cannot delete some instances of model 'Cliente' because they are referenced through protected foreign keys: 'Servico.cliente'.", {<Servico: Serviço 10 para Holly Reid com agendamento 10>, <Servico: Serviço 3 para Holly Reid com agendamento 5>, <Servico: Serviço 7 para Holly Reid com agendamento 10>})
+INFO 2024-11-06 17:51:49,532 basehttp "POST /admin/customer/delete_customer/ HTTP/1.1" 200 189
