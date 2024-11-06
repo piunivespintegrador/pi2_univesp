@@ -1,11 +1,15 @@
 import json
+import logging
 
+from django.db import IntegrityError
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 
 from .models import Cliente
+
+logger = logging.getLogger('django')
 
 # Principal
 
@@ -82,19 +86,27 @@ def delete_customer(request):
             data = json.loads(request.body)
 
             # Extrai o ID do cliente
-            customer_id = data.get('id')  
+            customer_id = data.get('id')
 
             # Tenta obter o cliente e excluir
-            cliente = Cliente.objects.get(id=customer_id)
-            cliente.delete()
+            customer = Cliente.objects.get(id=customer_id)
+            customer_name = customer.nome
+            customer.delete()
 
-            return JsonResponse({'success': True, 'message': f'Cliente {customer_id} excluído com sucesso.'})
+            logger.info(f"cliente {customer_id} removido com sucesso")
+            return JsonResponse({'success': True, 'message': f'Cliente {customer_name} ({customer_id}) excluído com sucesso.'})
 
         except Cliente.DoesNotExist:
-            return JsonResponse({'success': False, 'message': f'Cliente {customer_id} não encontrado.'})
-        
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Cliente {customer_name} ({customer_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Cliente {customer_name} ({customer_id})\nPor favor, delete o(s) serviço(s) ou remova o cliente associado aos mesmos para continuar com a exclusão'})
+
         except Exception as e:
-            return JsonResponse({'success': False, 'message': f'Erro ao excluir o cliente {customer_id}.'})
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o cliente {customer_name} ({customer_id})\nEntre em contato com o suporte'})
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
