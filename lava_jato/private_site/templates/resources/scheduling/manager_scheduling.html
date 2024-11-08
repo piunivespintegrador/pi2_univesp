@@ -1,6 +1,104 @@
 {% extends 'resources/base.html' %}
 
 {% block content %}
-<h2>Consultar Agendamentos</h2>
-<p>Template</p>
+    <h2 style="text-align:center;">Consultar Agendamentos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data/Hora Inicial</th>
+                <th>Data/Hora Final</th>
+                <th>Duração (Horas)</th>
+                <th>Disponível</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agendamento in page %}
+                <tr id="agendamento-{{ agendamento.id }}">
+                    <td>{{ agendamento.id }}</td>
+                    <!-- Campo para datetime_inicial -->
+                    <td>
+                        <input type="datetime-local" 
+                            id="datetime-inicio-{{ agendamento.id }}" 
+                            name="datetime-inicio-{{ agendamento.id }}"
+                            value="{{ agendamento.datetime_inicio|date:'Y-m-d\TH:i' }}"
+                            readonly>
+                    </td>
+
+                    <!-- Campo para datetime_fim -->
+                    <td>
+                        <input type="datetime-local" 
+                            id="datetime-fim-{{ agendamento.id }}" 
+                            name="datetime-fim-{{ agendamento.id }}"
+                            value="{{ agendamento.datetime_fim|date:'Y-m-d\TH:i' }}"
+                            readonly>
+                    </td>
+                    <td>
+                        <span>{{ agendamento.duracao_horas }} horas</span>
+                    </td>
+                    <td>
+                        {% if agendamento.disponivel %}
+                            <i class="fa-solid fa-check avaliable"></i>
+                        {% else %}
+                            <i class="fa-solid fa-x unavailable"></i>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <button href="" class="btn btn-edit">
+                            <i class="fas fa-edit"></i> Editar
+                        </button>
+                        <button class="btn btn-delete" onclick="confirmDeleteScheduling({{ agendamento.id }})">
+                            <i class="fas fa-trash-alt"></i> Excluir
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        {% for num in page.paginator.page_range %}
+            {% if page.number == num %}
+                <a class="active">{{ num }}</a>
+            {% else %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">Próxima</a>
+        {% endif %}
+    </div>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div id="modelConfirm" class="modal">
+        <div class="modal-content">
+            <p id="modelConfirmMessage">Tem certeza que deseja excluir este agendamento?</p>
+            <button onclick="deleteScheduling()">Sim</button>
+            <button onclick="closeModal()">Não</button>
+        </div>
+    </div>
+
+    <div id="modelAlert" class="modal">
+        <div class="modal-content">
+            <p id="modelAlertMessage"></p>
+            <button onclick="closeAlertModal()">OK</button>
+        </div>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' />
+    <link rel="stylesheet" href="{% static '/css/scheduling/manager_scheduling.css' %}">
+
+    <!-- Scripts do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="{% static '/js/scheduling/manager_scheduling.js' %}"></script>
 {% endblock %}
