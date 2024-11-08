@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 
-from .models import Cliente
+from .models import Cliente, Agendamento
 
 logger = logging.getLogger('django')
 
@@ -20,17 +20,37 @@ def dashboard(request):
 
 def manager_customer(request):
     clientes = Cliente.objects.all()
-    # 10 clientes por página
+    # 8 clientes por página
     paginator = Paginator(clientes, 8)
 
     # Obter o número da página atual da URL
     page_number = request.GET.get('page', 1)
     page = paginator.get_page(page_number)
 
-    return render(request, 'resources/customer/manager_customer.html',  {'page': page})
+    return render(request, 'resources/customer/manager_customer.html', {'page': page})
 
 def manager_scheduling(request):
-    return render(request, 'resources/scheduling/manager_scheduling.html')
+    agendamentos = Agendamento.objects.all()
+
+    # Calcular a quantidade de horas trabalhadas para cada agendamento
+    for agendamento in agendamentos:
+        if agendamento.datetime_inicio and agendamento.datetime_fim:
+            # Calculando a diferença entre as datas
+            delta = agendamento.datetime_fim - agendamento.datetime_inicio
+            # Convertendo a diferença para horas e minutos
+            agendamento.duracao_horas = delta.total_seconds() / 3600  # total_seconds converte a diferença para segundos
+            agendamento.duracao_horas = round(agendamento.duracao_horas, 2)  # Arredondar para 2 casas decimais
+        else:
+            agendamento.duracao_horas = 0  # Caso a data de início ou fim seja nula
+
+    # 8 agendamentos por página
+    paginator = Paginator(agendamentos, 8)
+
+    # Obter o número da página atual da URL
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    return render(request, 'resources/scheduling/manager_scheduling.html', {'page': page})
 
 def manager_service(request):
     return render(request, 'resources/service/manager_service.html')
@@ -107,6 +127,38 @@ def delete_customer(request):
         except Exception as e:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o cliente {customer_name} ({customer_id})\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+
+# View para excluir agendamento
+@csrf_exempt
+def delete_scheduling(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            # Extrai o ID do cliente
+            scheduling_id = data.get('id')
+
+            # Tenta obter o cliente e excluir
+            scheduling = Agendamento.objects.get(id=scheduling_id)
+            scheduling.delete()
+
+            logger.info(f"cliente {scheduling_id} removido com sucesso")
+            return JsonResponse({'success': True, 'message': f'Agendamento ({scheduling_id}) excluído com sucesso.'})
+
+        except Cliente.DoesNotExist:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Agendamento ({scheduling_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Agendamento ({scheduling_id})\nPor favor, delete o(s) serviço(s) ou remova o agendamento associado aos mesmos para continuar com a exclusão'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o agendamento ({scheduling_id})\nEntre em contato com o suporte'})
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 

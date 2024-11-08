@@ -11,6 +11,7 @@ urlpatterns = [
     path('scheduling/manager_scheduling/', views.manager_scheduling, name='manager_scheduling'),
     path('scheduling/register_scheduling/', views.register_scheduling, name='register_scheduling'),
     path('scheduling/edit_scheduling/', views.edit_scheduling, name='edit_scheduling'),
+    path('scheduling/delete_scheduling/', views.delete_scheduling, name='delete_scheduling'),
 
     path('service/manager_service/', views.manager_service, name='manager_service'),
     path('service/register_service/', views.register_service, name='register_service'),
