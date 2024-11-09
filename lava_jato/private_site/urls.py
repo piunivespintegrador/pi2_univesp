@@ -21,10 +21,12 @@ urlpatterns = [
     path('type_service/manager_type_service/', views.manager_type_service, name='manager_type_service'),
     path('type_service/register_type_service/', views.register_type_service, name='register_type_service'),
     path('type_service/edit_type_service/', views.edit_type_service, name='edit_type_service'),
+    path('type_service/delete_type_service/', views.delete_type_service, name='delete_type_service'),
 
     path('type_vehicle/manager_type_vehicle/', views.manager_type_vehicle, name='manager_type_vehicle'),
     path('type_vehicle/register_type_vehicle/', views.register_type_vehicle, name='register_type_vehicle'),
     path('type_vehicle/edit_type_vehicle/', views.edit_type_vehicle, name='edit_type_vehicle'),
+    path('type_vehicle/delete_type_vehicle/', views.delete_type_vehicle, name='delete_type_vehicle'),
 
     path('business_intelligence/bi_report/', views.bi_report, name='bi_report'),
     path('business_intelligence/bi_analysis/', views.bi_analysis, name='bi_analysis'),
