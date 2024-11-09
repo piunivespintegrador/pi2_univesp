@@ -56,20 +56,14 @@ Entre na pasta do projeto
 cd lava jato
 ```
 
-No arquivo python ```settings.py```, configure o DATABASES adicionado a senha e o usuário criado por você na criação do banco de dados.
+Faça uma copia do arquivo ```.env-exemplo``` e crie um arquivo  ```.env``` na mesma pasta, abra o arquivo e edite as credenciais do MySQL
 
 ```
-'mysql_db': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'lava_jato',     # Nome do banco de dados
-    'USER': 'seu_usuario',   # Usuário do banco de dados
-    'PASSWORD': 'sua_senha', # Senha do banco de dados
-    'HOST': '127.0.0.1',     # Endereço do servidor (pode ser 'localhost' para local)
-    'PORT': '3306',          # Porta do MySQL, geralmente 3306
-    'OPTIONS': {
-        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        'charset': 'utf8mb4',
-    },
+DB_NAME=lava_jato       # nome do banco de dados
+DB_USER=seu_usuario     # usuário do banco de dados
+DB_PASSWORD=sua_senha   # senha do banco de dados
+DB_HOST=127.0.0.1       # ou o IP do servidor de banco de dados
+DB_PORT=3306            # porta padrão do MySQL
 }
 ```
 
