@@ -8,8 +8,8 @@ class MySQLRouter:
                 model_name == 'forma_contato' or \
                 model_name == 'servico_forma_contato' or \
                 model_name == 'servico' or \
-                model_name == 'tipo_servico' or \
-                model_name == 'tipo_veiculo'
+                model_name == 'tiposervico' or \
+                model_name == 'tipoveiculo'
 
     """
         Valida de o model é do MongoDB
