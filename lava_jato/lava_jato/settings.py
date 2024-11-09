@@ -10,7 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
+
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Carrega as variáveis do arquivo .env
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +32,6 @@ SECRET_KEY = 'django-insecure-fl8su)fsgsisy-!y$cz-ff=*u4@7fxh)@o#3o2riesshqzqz%-
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -82,11 +87,11 @@ DATABASES = {
     },
     'mysql_db': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lava_jato',         # Nome do banco de dados
-        'USER': 'seu_usuario',       # Usuário do banco de dados
-        'PASSWORD': 'sua_senha',     # Senha do banco de dados
-        'HOST': '127.0.0.1',         # Endereço do servidor (pode ser 'localhost' para local)
-        'PORT': '3306',              # Porta do MySQL, geralmente 3306
+        'NAME': os.getenv('DB_NAME', 'lava_jato'),              # Nome do banco de dados
+        'USER': os.getenv('DB_USER', 'seu_usuario'),            # Usuário do banco de dados
+        'PASSWORD': os.getenv('DB_PASSWORD', 'sua_senha'),      # Senha do banco de dados
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),              # Endereço do servidor (pode ser 'localhost' para local)
+        'PORT': os.getenv('DB_PORT', '3306'),                   # Porta do MySQL, geralmente 3306
         'OPTIONS': {
             'sql_mode': 'STRICT_TRANS_TABLES',
             'charset': 'utf8mb4',
