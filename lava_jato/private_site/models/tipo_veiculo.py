@@ -7,4 +7,4 @@ class TipoVeiculo(models.Model):
         db_table = 'tipo_veiculo'
 
     def __str__(self):
-        return self.nome_veiculo
+        return f"{self.nome_veiculo}"

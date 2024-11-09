@@ -3,7 +3,7 @@ from django.db import models
 from .agendamento import Agendamento
 from .cliente import Cliente
 from .tipo_servico import TipoServico
-from.tipo_veiculo import TipoVeiculo
+from .tipo_veiculo import TipoVeiculo
 
 class Servico(models.Model):
     agendamento = models.ForeignKey(Agendamento, null=True, on_delete=models.SET_NULL)
@@ -17,4 +17,5 @@ class Servico(models.Model):
         db_table = 'servico'
 
     def __str__(self):
-        return f"Serviço {self.id} para {self.cliente.nome} com agendamento {self.agendamento.id}"
+        return f"Serviço {self.id} para {self.cliente.nome} com agendamento {self.agendamento.id} \
+            Tipo do Serviço {self.tipo_servico.valor_servico} - Nome do Veículo {self.tipo_veiculo.id}"
