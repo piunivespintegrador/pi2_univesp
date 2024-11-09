@@ -88,7 +88,7 @@ DATABASES = {
         'HOST': '127.0.0.1',         # Endereço do servidor (pode ser 'localhost' para local)
         'PORT': '3306',              # Porta do MySQL, geralmente 3306
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'sql_mode': 'STRICT_TRANS_TABLES',
             'charset': 'utf8mb4',
         },
     }
