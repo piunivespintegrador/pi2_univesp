@@ -65,10 +65,28 @@ def manager_service(request):
     return render(request, 'resources/service/manager_service.html', {'page': page})
 
 def manager_type_service(request):
-    return render(request, 'resources/type_service/register_type_service.html')
+    tipos_service = TipoServico.objects.all()
+
+    # 8 tipos de serviços por página
+    paginator = Paginator(tipos_service, 8)
+
+    # Obter o número da página atual da URL
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    return render(request, 'resources/type_service/manager_type_service.html', {'page': page})
 
 def manager_type_vehicle(request):
-    return render(request, 'resources/type_vehicle/register_type_vehicle.html')
+    tipos_veiculo = TipoVeiculo.objects.all()
+
+    # 8 tipos de veiculos por página
+    paginator = Paginator(tipos_veiculo, 8)
+
+    # Obter o número da página atual da URL
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    return render(request, 'resources/type_vehicle/manager_type_vehicle.html', {'page': page})
 
 # Cadastrar
 
@@ -206,6 +224,70 @@ def delete_service(request):
         except Exception as e:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o serviço ({service_id})\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+
+# Método POST para excluir tipo serviço
+@csrf_exempt
+def delete_type_service(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            # Extrai o ID do cliente
+            type_service_id = data.get('id')
+
+            # Tenta obter o cliente e excluir
+            type_service = TipoServico.objects.get(id=type_service_id)
+
+            type_service.delete()
+
+            logger.info(f"tipo serviço {type_service_id} removido com sucesso")
+            return JsonResponse({'success': True, 'message': f'Tipo Serviço ({type_service_id}) excluído com sucesso.'})
+
+        except Cliente.DoesNotExist:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Tipo Serviço ({type_service_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Tipo Serviço ({type_service_id})\nPor favor, delete o(s) tipo serviço ou remova o serviço associado aos mesmos para continuar com a exclusão'})
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o serviço ({type_service_id})\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+
+# Método POST para excluir tipo veiculo
+@csrf_exempt
+def delete_type_vehicle(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            # Extrai o ID do cliente
+            type_vehicle_id = data.get('id')
+
+            # Tenta obter o cliente e excluir
+            type_vehicle = TipoVeiculo.objects.get(id=type_vehicle_id)
+
+            type_vehicle.delete()
+
+            logger.info(f"tipo veiculo {type_vehicle_id} removido com sucesso")
+            return JsonResponse({'success': True, 'message': f'Tipo Veiculo ({type_vehicle_id}) excluído com sucesso.'})
+
+        except Cliente.DoesNotExist:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Tipo Veiculo ({type_vehicle_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Tipo Veiculo ({type_vehicle_id})\nPor favor, delete o(s) tipo veiculo ou remova o serviço associado aos mesmos para continuar com a exclusão'})
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o tipo veiculo ({type_vehicle_id})\nEntre em contato com o suporte'})
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
