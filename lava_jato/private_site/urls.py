@@ -16,6 +16,7 @@ urlpatterns = [
     path('service/manager_service/', views.manager_service, name='manager_service'),
     path('service/register_service/', views.register_service, name='register_service'),
     path('service/edit_service/', views.edit_service, name='edit_service'),
+    path('service/delete_service/', views.delete_service, name='delete_service'),
 
     path('type_service/manager_type_service/', views.manager_type_service, name='manager_type_service'),
     path('type_service/register_type_service/', views.register_type_service, name='register_type_service'),

@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 
-from .models import Cliente, Agendamento
+from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo
 
 logger = logging.getLogger('django')
 
@@ -53,7 +53,16 @@ def manager_scheduling(request):
     return render(request, 'resources/scheduling/manager_scheduling.html', {'page': page})
 
 def manager_service(request):
-    return render(request, 'resources/service/manager_service.html')
+    services = Servico.objects.all()
+
+    # 8 serviços por página
+    paginator = Paginator(services, 8)
+
+    # Obter o número da página atual da URL
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    return render(request, 'resources/service/manager_service.html', {'page': page})
 
 def manager_type_service(request):
     return render(request, 'resources/type_service/register_type_service.html')
@@ -97,7 +106,7 @@ def edit_type_vehicle(request):
 
 # Excluir
 
-# View para excluir cliente
+# Método POST para excluir cliente
 @csrf_exempt
 def delete_customer(request):
     if request.method == 'POST':
@@ -130,7 +139,7 @@ def delete_customer(request):
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
-# View para excluir agendamento
+# Método POST para excluir agendamento
 @csrf_exempt
 def delete_scheduling(request):
     if request.method == 'POST':
@@ -145,7 +154,7 @@ def delete_scheduling(request):
             scheduling = Agendamento.objects.get(id=scheduling_id)
             scheduling.delete()
 
-            logger.info(f"cliente {scheduling_id} removido com sucesso")
+            logger.info(f"agendamento {scheduling_id} removido com sucesso")
             return JsonResponse({'success': True, 'message': f'Agendamento ({scheduling_id}) excluído com sucesso.'})
 
         except Cliente.DoesNotExist:
@@ -159,6 +168,44 @@ def delete_scheduling(request):
         except Exception as e:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o agendamento ({scheduling_id})\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+
+
+# Método POST para excluir serviço
+@csrf_exempt
+def delete_service(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            # Extrai o ID do cliente
+            service_id = data.get('id')
+
+            # Tenta obter o cliente e excluir
+            service = Servico.objects.get(id=service_id)
+
+            # Coloca o agendamento como disponível
+            service.agendamento.disponivel = True
+            service.agendamento.save()
+
+            service.delete()
+
+            logger.info(f"serviço {service_id} removido com sucesso")
+            return JsonResponse({'success': True, 'message': f'Serviço ({service_id}) excluído com sucesso.'})
+
+        except Cliente.DoesNotExist:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Serviço ({service_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Serviço ({service_id})'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o serviço ({service_id})\nEntre em contato com o suporte'})
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
