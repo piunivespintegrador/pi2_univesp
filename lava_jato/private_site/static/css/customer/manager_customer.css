@@ -30,6 +30,10 @@ th {
     background-color: #f44336;
 }
 
+.btn-disabled {
+    background-color: #b3b3b3;
+}
+
 .btn i {
     margin-right: 5px;
 }

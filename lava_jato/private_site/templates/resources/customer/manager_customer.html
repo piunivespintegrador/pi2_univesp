@@ -7,6 +7,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Placa</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Telefone</th>
@@ -17,11 +18,12 @@
             {% for cliente in page %}
                 <tr id="cliente-{{ cliente.id }}">
                     <td>{{ cliente.id }}</td>
+                    <td>{{ cliente.placa_carro }}</td>
                     <td>{{ cliente.nome }}</td>
                     <td>{{ cliente.email_contato_1 }}</td>
                     <td>{{ cliente.telefone_contato_1 }}</td>
                     <td>
-                        <button href="" class="btn btn-edit">
+                        <button href="" class="btn btn-disabled" disabled>
                             <i class="fas fa-edit"></i> Editar
                         </button>
                         <button class="btn btn-delete" onclick="confirmDeleteCustomer({{ cliente.id }})">

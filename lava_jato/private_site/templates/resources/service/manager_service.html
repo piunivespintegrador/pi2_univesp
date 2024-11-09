@@ -1,6 +1,88 @@
 {% extends 'resources/base.html' %}
 
 {% block content %}
-<h2>Consultar Serviços</h2>
-<p>Template</p>
+    <h2 style="text-align:center;">Consulta de Serviço</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID do Agendamento</th>
+                <th>Placa do Cliente</th>
+                <th>Tipo de Veículo</th>
+                <th>Tipo de Serviço</th>
+                <th>Valor Serviço</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in page %}
+                <tr id="service-{{ service.id }}">
+                    <td>{{ service.id }}</td>
+                    <td>{{ service.agendamento.id }}</td>
+                    <td>{{ service.cliente.placa_carro }}</td>
+                    <td>{{ service.tipo_veiculo.nome_veiculo }}</td>
+                    <td>{{ service.tipo_servico.nome_servico }}</td>
+                    <td>{{ service.valor_servico }}</td>
+                    <td>
+                        <textarea disabled>
+                            {{ service.mensagem }}
+                        </textarea>
+                    </td>
+                    <td>
+                        <button href="" class="btn btn-disabled" disabled>
+                            <i class="fas fa-edit"></i> Editar
+                        </button>
+                        <button class="btn btn-delete" onclick="confirmDeleteService({{ service.id }})">
+                            <i class="fas fa-trash-alt"></i> Excluir
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        {% for num in page.paginator.page_range %}
+            {% if page.number == num %}
+                <a class="active">{{ num }}</a>
+            {% else %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">Próxima</a>
+        {% endif %}
+    </div>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div id="modelConfirm" class="modal">
+        <div class="modal-content">
+            <p id="modelConfirmMessage">Tem certeza que deseja excluir este serviço?</p>
+            <button onclick="deleteService()">Sim</button>
+            <button onclick="closeModal()">Não</button>
+        </div>
+    </div>
+
+    <div id="modelAlert" class="modal">
+        <div class="modal-content">
+            <p id="modelAlertMessage"></p>
+            <button onclick="closeAlertModal()">OK</button>
+        </div>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/service/manager_service.css' %}">
+
+    <!-- Scripts do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="{% static '/js/service/manager_service.js' %}"></script>
 {% endblock %}
