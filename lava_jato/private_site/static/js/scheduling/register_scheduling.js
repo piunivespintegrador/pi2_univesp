@@ -30,8 +30,8 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     Reset();
 
     // Obtém os valores dos campos datetime-local
-    var startDate = new Date(document.getElementById('start-data').value);
-    var endDate = new Date(document.getElementById('end-data').value);
+    let startDate = new Date(document.getElementById('start-data').value);
+    let endDate = new Date(document.getElementById('end-data').value);
 
     // Verifica se o start é maior ou igual ao end, se for, exibe erro
     /*
