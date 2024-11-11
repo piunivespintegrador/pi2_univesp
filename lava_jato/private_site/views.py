@@ -108,16 +108,16 @@ def register_scheduling(request):
             end_data = data.get('end-data')
 
             if(start_data >= end_data):
-                return JsonResponse({'success': False, 'message': f'A data de início do serviço não pode ser maior que a data final do serviço!'})
+                return JsonResponse({'warning': True, 'message': f'A data de início do serviço não pode ser maior que a data final do serviço!'})
 
-            agendamento = Agendamento.objects.using('mysql_db').create(
+            object_agendamento = Agendamento.objects.using('mysql_db').create(
                 datetime_inicio=start_data,
                 datetime_fim=end_data,
                 disponivel=True
             )
 
             # Verifique se o objeto foi criado com sucesso
-            if not agendamento:
+            if not object_agendamento:
                 return JsonResponse({'success': False, 'message': f'Falha ao tentar criar o agendamento - não foi possível criar objeto'})
 
             return JsonResponse({'success': True, 'message': f'Agendamento cadastrado com sucesso'})
@@ -125,13 +125,9 @@ def register_scheduling(request):
         except json.JSONDecodeError:
             return JsonResponse({'success': False, 'message': 'Erro ao processar os dados.'})
 
-        except IntegrityError as e:
-            logger.error(repr(e))
-            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Cliente {customer_name} ({customer_id})\nPor favor, delete o(s) serviço(s) ou remova o cliente associado aos mesmos para continuar com a exclusão'})
-
         except Exception as e:
             logger.error(repr(e))
-            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o cliente {customer_name} ({customer_id})\nEntre em contato com o suporte'})
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar criar Agendamento\nEntre em contato com o suporte'})
 
     return render(request, 'resources/scheduling/register_scheduling.html')
 
@@ -139,9 +135,79 @@ def register_service(request):
     return render(request, 'resources/service/register_service.html')
 
 def register_type_service(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            nome_servico = data.get('nome-servico')
+            valor_servico = float(data.get('valor-servico').replace(",", "."))
+
+            if not nome_servico:
+                return JsonResponse({'warning': True, 'message': f'O nome do tipo de serviço é obrigatório'})
+            elif not (valor_servico >= 0):
+                return JsonResponse({'warning': True, 'message': f'O valor do serviço deve ser maior ou igual a R$ 0,00'})
+
+            # Verificamos se existe um tipo serviço com o mesmo nome
+            exist_tipo_servico = TipoServico.objects.using('mysql_db').filter(nome_servico=nome_servico).exists()
+
+            if exist_tipo_servico:
+                return JsonResponse({'warning': True, 'message': f'O serviço com o nome ({nome_servico}) já foi registrado'})
+
+            object_tipo_servico = TipoServico.objects.using('mysql_db').create(
+                nome_servico=nome_servico,
+                valor_servico=valor_servico,
+            )
+
+            # Verifique se o objeto foi criado com sucesso
+            if not object_tipo_servico:
+                return JsonResponse({'success': False, 'message': f'Falha ao tentar criar o tipo serviço - não foi possível criar objeto'})
+
+            return JsonResponse({'success': True, 'message': f'Tipo Serviço cadastrado com sucesso'})
+
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'message': 'Erro ao processar os dados.'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar criar Tipo Serviço\nEntre em contato com o suporte'})
+
     return render(request, 'resources/type_service/register_type_service.html')
 
 def register_type_vehicle(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            nome_veiculo = data.get('nome-veiculo')
+
+            if not nome_veiculo:
+                return JsonResponse({'warning': True, 'message': f'O nome do tipo de veículo é obrigatório'})
+
+            # Verificamos se existe um tipo veículo com o mesmo nome
+            exist_tipo_veiculo = TipoVeiculo.objects.using('mysql_db').filter(nome_veiculo=nome_veiculo).exists()
+
+            if exist_tipo_veiculo:
+                return JsonResponse({'warning': True, 'message': f'O veículo com o nome ({nome_veiculo}) já foi registrado'})
+
+            object_tipo_veiculo = TipoVeiculo.objects.using('mysql_db').create(
+                nome_veiculo=nome_veiculo
+            )
+
+            # Verifique se o objeto foi criado com sucesso
+            if not object_tipo_veiculo:
+                return JsonResponse({'success': False, 'message': f'Falha ao tentar criar o tipo veículo - não foi possível criar objeto'})
+
+            return JsonResponse({'success': True, 'message': f'Tipo Veículo cadastrado com sucesso'})
+
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'message': 'Erro ao processar os dados.'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar criar Tipo Veículo\nEntre em contato com o suporte'})
+
     return render(request, 'resources/type_vehicle/register_type_vehicle.html')
 
 # Editar

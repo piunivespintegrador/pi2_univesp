@@ -1,5 +1,13 @@
 const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
+function moneyFormat(input) {
+    let valor = input.value.replace(/\D/g, ''); // Remove qualquer coisa que não seja número
+    valor = (valor / 100).toFixed(2) + ''; // Converte para formato decimal
+    valor = valor.replace('.', ','); // Substitui o ponto por vírgula
+    valor = valor.replace(/(\d)(\d{3})(\d{2}$)/, '$1.$2,$3'); // Adiciona o ponto e a vírgula
+    input.value = valor;
+}
+
 function Reset(message)
 {
     document.getElementById('result').textContent = '';
@@ -29,17 +37,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     Reset();
 
-    // Obtém os valores dos campos datetime-local
-    var startDate = new Date(document.getElementById('start-data').value);
-    var endDate = new Date(document.getElementById('end-data').value);
-
-    // Verifica se o start é maior ou igual ao end, se for, exibe erro
-    /*
-    if (startDate >= endDate) {
-        Fail('A data de início do serviço não pode ser maior que a data final do serviço!');
-        return;
-    }
-    */
+    // Validação aqui
 
     let result = submitForm(new FormData(this));
 
@@ -55,6 +53,8 @@ function submitForm(formData)
     });
 
     let request_uri = document.getElementById('registerForm').action
+
+    console.log(data);
 
     // Envia os dados via AJAX (usando fetch)
     fetch(request_uri, {
@@ -80,7 +80,7 @@ function submitForm(formData)
     })
     .catch(error => {
         console.error('Error:', error);
-        Fail('Erro ao cadastrar o Agendamento.');
+        Fail('Erro ao cadastrar o Tipo Serviço.');
         return false;
     });
 }
