@@ -123,3 +123,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     calendar.render();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        calendar.render();
+    }, 1);
+}, false);
