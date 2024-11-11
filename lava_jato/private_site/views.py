@@ -16,6 +16,11 @@ logger = logging.getLogger('django')
 def dashboard(request):
     return render(request, 'resources/home/dashboard.html')
 
+# Health
+
+def health(request):
+    return JsonResponse({'health': f'alive'})
+
 # Consultar
 
 def manager_customer(request):
