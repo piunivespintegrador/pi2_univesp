@@ -1,6 +1,32 @@
 {% extends 'resources/base.html' %}
 
 {% block content %}
-<h2>Cadastrar Agendamento</h2>
-<p>Template</p>
+    <div class="centered-wrapper">
+        <div class="container">
+            <h2 style="text-align:center;">Cadastro do Agendamento</h2>
+            <form id="schedulingForm" action="{% url 'register_scheduling' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="data">Data do Inicio do Serviço:</label>
+                    <input type="datetime-local" id="start-data" name="start-data" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Data do Fim do Serviço:</label>
+                    <input type="datetime-local" id="end-data" name="end-data" required>
+                </div>
+                <button type="submit" class="btn-submit">Criar Agendamento</button>
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' />
+    <link rel="stylesheet" href="{% static '/css/scheduling/register_scheduling.css' %}">
+
+    <!-- Scripts do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="{% static '/js/scheduling/register_scheduling.js' %}"></script>
 {% endblock %}
