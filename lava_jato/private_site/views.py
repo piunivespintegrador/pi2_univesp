@@ -94,6 +94,40 @@ def register_customer(request):
     return render(request, 'resources/customer/register_customer.html')
 
 def register_scheduling(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            start_data = data.get('start-data')
+            end_data = data.get('end-data')
+
+            if(start_data >= end_data):
+                return JsonResponse({'success': False, 'message': f'A data de início do serviço não pode ser maior que a data final do serviço!'})
+
+            agendamento = Agendamento.objects.using('mysql_db').create(
+                datetime_inicio=start_data,
+                datetime_fim=end_data,
+                disponivel=True
+            )
+
+            # Verifique se o objeto foi criado com sucesso
+            if not agendamento:
+                return JsonResponse({'success': False, 'message': f'Falha ao tentar criar o agendamento - não foi possível criar objeto'})
+
+            return JsonResponse({'success': True, 'message': f'Agendamento cadastrado com sucesso'})
+
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'message': 'Erro ao processar os dados.'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Cliente {customer_name} ({customer_id})\nPor favor, delete o(s) serviço(s) ou remova o cliente associado aos mesmos para continuar com a exclusão'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o cliente {customer_name} ({customer_id})\nEntre em contato com o suporte'})
+
     return render(request, 'resources/scheduling/register_scheduling.html')
 
 def register_service(request):
@@ -173,7 +207,7 @@ def delete_scheduling(request):
             logger.info(f"agendamento {scheduling_id} removido com sucesso")
             return JsonResponse({'success': True, 'message': f'Agendamento ({scheduling_id}) excluído com sucesso.'})
 
-        except Cliente.DoesNotExist:
+        except Agendamento.DoesNotExist:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Agendamento ({scheduling_id}) não encontrado'})
 
@@ -210,7 +244,7 @@ def delete_service(request):
             logger.info(f"serviço {service_id} removido com sucesso")
             return JsonResponse({'success': True, 'message': f'Serviço ({service_id}) excluído com sucesso.'})
 
-        except Cliente.DoesNotExist:
+        except Servico.DoesNotExist:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Serviço ({service_id}) não encontrado'})
 
@@ -242,7 +276,7 @@ def delete_type_service(request):
             logger.info(f"tipo serviço {type_service_id} removido com sucesso")
             return JsonResponse({'success': True, 'message': f'Tipo Serviço ({type_service_id}) excluído com sucesso.'})
 
-        except Cliente.DoesNotExist:
+        except TipoServico.DoesNotExist:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Tipo Serviço ({type_service_id}) não encontrado'})
 
@@ -273,7 +307,7 @@ def delete_type_vehicle(request):
             logger.info(f"tipo veiculo {type_vehicle_id} removido com sucesso")
             return JsonResponse({'success': True, 'message': f'Tipo Veiculo ({type_vehicle_id}) excluído com sucesso.'})
 
-        except Cliente.DoesNotExist:
+        except TipoVeiculo.DoesNotExist:
             logger.error(repr(e))
             return JsonResponse({'success': False, 'message': f'Tipo Veiculo ({type_vehicle_id}) não encontrado'})
 

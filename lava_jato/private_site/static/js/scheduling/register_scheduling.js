@@ -34,10 +34,12 @@ document.getElementById('schedulingForm').addEventListener('submit', function(ev
     var endDate = new Date(document.getElementById('end-data').value);
 
     // Verifica se o start é maior ou igual ao end, se for, exibe erro
+    /*
     if (startDate >= endDate) {
         Fail('A data de início do serviço não pode ser maior que a data final do serviço!');
         return;
     }
+    */
 
     let result = submitForm(new FormData(this));
 
@@ -46,18 +48,30 @@ document.getElementById('schedulingForm').addEventListener('submit', function(ev
 
 function submitForm(formData)
 {
+    const data = {};
+
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
     // Envia os dados via AJAX (usando fetch)
     fetch(`/admin/scheduling/register_scheduling/`, {
         method: 'POST',
         headers: {
             'X-CSRFToken': csrf_token
         },
-        body: formData  // Envia os dados coletados no FormData
+        body: JSON.stringify(data)  // Envia os dados coletados no FormData
     })
     .then(response => response.json())  // Aqui você pode ajustar a resposta de acordo com sua view
     .then(data => {
         // Trate a resposta aqui, por exemplo, mostre uma mensagem de sucesso
-        Success('Agendamento cadastrado com sucesso');
+        console.info(data);
+
+        if(data.success)
+            Success(data.message);
+        else
+            Fail(data.message);
+
         return true;
     })
     .catch(error => {
