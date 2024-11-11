@@ -9,7 +9,9 @@
                 <th>ID</th>
                 <th>Placa</th>
                 <th>Nome</th>
-                <th>Email</th>
+                <th>E-mail Primário</th>
+                <th>E-mail</th>
+                <th>Telefone Principal</th>
                 <th>Telefone</th>
                 <th>Ações</th>
             </tr>
@@ -21,7 +23,21 @@
                     <td>{{ cliente.placa_carro }}</td>
                     <td>{{ cliente.nome }}</td>
                     <td>{{ cliente.email_contato_1 }}</td>
+                    <td>
+                        {% if cliente.email_contato_2 %}
+                            {{ cliente.email_contato_2 }}
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
                     <td>{{ cliente.telefone_contato_1 }}</td>
+                    <td>
+                        {% if cliente.telefone_contato_2 %}
+                            {{ cliente.telefone_contato_2 }}
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
                     <td>
                         <button href="" class="btn btn-disabled" disabled>
                             <i class="fas fa-edit"></i> Editar

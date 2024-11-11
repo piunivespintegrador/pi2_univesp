@@ -52,9 +52,27 @@
         </div>-->
     </div>
 
-    <div style="padding:0 16px">
+    <div id="template_content" style="display:none">
         {% block content %}
         <!-- O conteúdo de cada página será renderizado aqui -->
         {% endblock %}
     </div>
+
+    <script>
+        window.onload = function() {
+            // Após o carregamento do CSS e JS, exibe o conteúdo
+            document.getElementById('template_content').style.display = 'block';
+
+
+            // Forçar o reflow/recálculo de layout
+            const content = document.getElementById('template_content');
+            content.offsetHeight; // Acessar a propriedade faz o reflow
+
+            // Agora, pode forçar um "refresh" ou renderizar novamente
+            setTimeout(function() {
+                // Forçar o redimensionamento da página
+                window.dispatchEvent(new Event('resize'));
+            }, 0);
+        }
+    </script>
 </body>

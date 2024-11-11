@@ -12,6 +12,7 @@
                 <th>Tipo de Veículo</th>
                 <th>Tipo de Serviço</th>
                 <th>Valor Serviço</th>
+                <th>Forma de Contato</th>
                 <th>Descrição</th>
                 <th>Ações</th>
             </tr>
@@ -26,7 +27,16 @@
                     <td>{{ service.tipo_servico.nome_servico }}</td>
                     <td>R$ {{ service.valor_servico }}</td>
                     <td>
-                        <textarea disabled>
+                        {% if service.servicos_forma_contato %}
+                            {% for servico_forma_contato in service.servicos_forma_contato %}
+                                <p>{{ servico_forma_contato.forma_contato }}</p>
+                            {% endfor %}
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
+                    <td>
+                        <textarea cols="35" rows="5" disabled>
                             {{ service.mensagem }}
                         </textarea>
                     </td>

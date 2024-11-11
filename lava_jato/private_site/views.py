@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 
-from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo
+from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo, ServicoFormaContato
 
 logger = logging.getLogger('django')
 
@@ -63,9 +63,19 @@ def manager_service(request):
     # 8 serviços por página
     paginator = Paginator(services, 8)
 
+
     # Obter o número da página atual da URL
     page_number = request.GET.get('page', 1)
     page = paginator.get_page(page_number)
+
+    # adiciona os tipos de contato que o serviço aceita
+    for service in page:
+        try:
+            servicos_forma_contato = ServicoFormaContato.objects.filter(servico_id=service.id)
+        except ServicoFormaContato.DoesNotExist:
+            servicos_forma_contato = None
+
+        service.servicos_forma_contato = servicos_forma_contato
 
     return render(request, 'resources/service/manager_service.html', {'page': page})
 
