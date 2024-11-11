@@ -29,18 +29,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     Reset();
 
-    // Obtém os valores dos campos datetime-local
-    let startDate = new Date(document.getElementById('start-data').value);
-    let endDate = new Date(document.getElementById('end-data').value);
-
-    // Verifica se o start é maior ou igual ao end, se for, exibe erro
-    /*
-    if (startDate >= endDate) {
-        Fail('A data de início do serviço não pode ser maior que a data final do serviço!');
-        return;
-    }
-    */
-
     let result = submitForm(new FormData(this));
 
     if(!result) return;
@@ -83,4 +71,6 @@ function submitForm(formData)
         Fail('Erro ao cadastrar o Agendamento.');
         return false;
     });
+
+    return false;
 }
