@@ -15,7 +15,7 @@ function Fail(message)
 function Warning(message)
 {
     document.getElementById('result').textContent = message;
-    document.getElementById('result').style.color = 'yellow';
+    document.getElementById('result').style.color = '#eed202';
 }
 
 function Success(message)
@@ -59,7 +59,9 @@ function submitForm(formData)
         // Trate a resposta aqui, por exemplo, mostre uma mensagem de sucesso
         console.info(data);
 
-        if(data.success)
+        if(data.warning)
+            Warning(data.message);
+        else if(data.success)
             Success(data.message);
         else
             Fail(data.message);
