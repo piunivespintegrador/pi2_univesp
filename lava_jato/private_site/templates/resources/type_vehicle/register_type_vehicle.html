@@ -1,6 +1,28 @@
 {% extends 'resources/base.html' %}
 
 {% block content %}
-<h2>Cadastro Tipo Veículo</h2>
-<p>Template</p>
+    <div class="centered-wrapper">
+        <div class="container">
+            <h2 style="text-align:center;">Cadastro do Tipo Veículo</h2>
+            <form id="registerForm" action="{% url 'register_type_vehicle' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="cliente">Tipo Veículo:</label>
+                    <input type="text" id="tipo-veiculo" name="tipo-veiculo" required>
+                </div>
+                <button type="submit" class="btn-submit">Criar Tipo Veículo</button>
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' />
+    <link rel="stylesheet" href="{% static '/css/type_vehicle/register_type_vehicle.css' %}">
+
+    <!-- Scripts do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="{% static '/js/type_vehicle/register_type_vehicle.js' %}"></script>
 {% endblock %}
