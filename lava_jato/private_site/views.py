@@ -9,6 +9,8 @@ from django.http import JsonResponse
 
 from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo, ServicoFormaContato
 
+from datetime import datetime
+
 logger = logging.getLogger('django')
 
 # Principal
@@ -246,10 +248,7 @@ def delete_customer(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             customer_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             customer = Cliente.objects.get(id=customer_id)
             customer_name = customer.nome
             customer.delete()
@@ -278,10 +277,7 @@ def delete_scheduling(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             scheduling_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             scheduling = Agendamento.objects.get(id=scheduling_id)
             scheduling.delete()
 
@@ -310,10 +306,7 @@ def delete_service(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             service_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             service = Servico.objects.get(id=service_id)
 
             # Coloca o agendamento como disponível
@@ -346,12 +339,8 @@ def delete_type_service(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             type_service_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             type_service = TipoServico.objects.get(id=type_service_id)
-
             type_service.delete()
 
             logger.info(f"tipo serviço {type_service_id} removido com sucesso")
@@ -377,12 +366,8 @@ def delete_type_vehicle(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             type_vehicle_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             type_vehicle = TipoVeiculo.objects.get(id=type_vehicle_id)
-
             type_vehicle.delete()
 
             logger.info(f"tipo veiculo {type_vehicle_id} removido com sucesso")
@@ -413,3 +398,62 @@ def bi_analysis(request):
 
 def site_edit(request):
     return render(request, 'resources/site/site_edit.html')
+
+
+# Calendar Event
+
+def calendar_service_event(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            start_data = data.get('start-data')
+            end_data = data.get('end-data')
+
+            # Converte as strings ISO para objetos datetime
+            start_date = datetime.fromisoformat(start_data)
+            end_date = datetime.fromisoformat(end_data)
+
+            events = []
+
+            agendamentos = Agendamento.objects.using('mysql_db').filter(
+                datetime_inicio__gte=start_date,
+                datetime_inicio__lte=end_date
+            )
+
+            # Obtém todos os serviços associados aos agendamentos filtrados
+            servicos = Servico.objects.using('mysql_db').filter(
+                agendamento__in=agendamentos
+            ).distinct()
+
+            for servico in servicos:
+                color = '#808080'
+                status = "None"
+
+                if servico.status == 0:
+                    color = '#2efd2e'
+                    status = 'Agendado'
+                elif servico.status == 1:
+                    color = '#ffe135e0'
+                    status = 'Realizado Serviço'
+                elif servico.status == 2:
+                    color = '#f44336'
+                    status = 'Serviço Finalizado'
+
+                events.append({
+                    'title': f'Cliente {servico.cliente.nome} - ({status})',
+                    'start': servico.agendamento.datetime_inicio,
+                    'end': servico.agendamento.datetime_fim,
+                    'description' : f'Serviço para o veículo ({servico.tipo_veiculo.nome_veiculo}) placa ({servico.cliente.placa_carro})',
+                    'color': color
+                })
+
+            return JsonResponse({'success': True, 'events': events})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar enviar os eventos ao calendário\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+

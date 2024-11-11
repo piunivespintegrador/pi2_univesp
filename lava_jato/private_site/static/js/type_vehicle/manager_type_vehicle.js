@@ -46,12 +46,14 @@ function deleteTypeVehicle() {
             } else {
                 alertMessage(data.message);
             }
+
             closeModal();
         })
         .catch(error => {
-            console.error('Error:', error);
             alertMessage('Erro ao tentar excluir o tipo veiculo ' + type_vehicle_id + '.');
             closeModal();
+
+            console.error('Error:', error);
         });
     }
 }

@@ -28,6 +28,7 @@ th {
     border: none;
     border-radius: 4px;
     color: #fff;
+    margin-top: 5px;
 }
 
 .btn-edit {
@@ -93,4 +94,30 @@ th {
 .modal-content button {
     margin: 0 10px;
     padding: 8px 12px;
+}
+
+/* classe para os status */
+
+.status-active {
+    background-color: #2efd2e50;
+}
+
+.btn-swap-progress {
+    background-color: #ffe135e0;
+}
+
+.status-progress {
+    background-color: #ffe13550;
+}
+
+.btn-swap-done {
+    background-color: #f44336;
+}
+
+.status-done {
+    background-color: #f4433650;
+}
+
+.btn-swap-active {
+    background-color: #2efd2e;
 }
