@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         eventClick: function(info) {
             // Exibe informações do serviço em um alerta
             alertMessage(
-                `Serviço: ${info.event.title}\n` +
+                `${info.event.title}\n` +
                 `Início: ${info.event.start.toLocaleString()}\n` +
                 `Fim: ${info.event.end ? info.event.end.toLocaleString() : "N/A"}\n` +
                 `Descrição: ${info.event.extendedProps.description}`

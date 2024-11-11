@@ -9,6 +9,8 @@ from django.http import JsonResponse
 
 from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo, ServicoFormaContato
 
+from datetime import datetime
+
 logger = logging.getLogger('django')
 
 # Principal
@@ -409,41 +411,49 @@ def calendar_service_event(request):
             start_data = data.get('start-data')
             end_data = data.get('end-data')
 
+            # Converte as strings ISO para objetos datetime
+            start_date = datetime.fromisoformat(start_data)
+            end_date = datetime.fromisoformat(end_data)
+
             events = []
 
-            events.append({
-                    'title': 'Reunião com cliente',  # Título do agendamento
-                    'start': start_data,  # Data de início
-                    'end': end_data,  # Data de término
-                    'description' : 'Discussão de projeto com cliente.'
-                })
-            
-            return JsonResponse({'success': True, 'events': events})
-        except TipoVeiculo.DoesNotExist:
-            logger.error(repr(e))
-            return JsonResponse({'success': False, 'message': f'Tipo Veiculo ({type_vehicle_id}) não encontrado'})
+            agendamentos = Agendamento.objects.using('mysql_db').filter(
+                datetime_inicio__gte=start_date,
+                datetime_inicio__lte=end_date
+            )
 
-        except IntegrityError as e:
-            logger.error(repr(e))
-            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Tipo Veiculo ({type_vehicle_id})\nPor favor, delete o(s) tipo veiculo ou remova o serviço associado aos mesmos para continuar com a exclusão'})
+            # Obtém todos os serviços associados aos agendamentos filtrados
+            servicos = Servico.objects.using('mysql_db').filter(
+                agendamento__in=agendamentos
+            ).distinct()
+
+            for servico in servicos:
+                color = '#808080'
+                status = "None"
+
+                if servico.status == 0:
+                    color = '#2efd2e'
+                    status = 'Agendado'
+                elif servico.status == 1:
+                    color = '#ffe135e0'
+                    status = 'Realizado Serviço'
+                elif servico.status == 2:
+                    color = '#f44336'
+                    status = 'Serviço Finalizado'
+
+                events.append({
+                    'title': f'Cliente {servico.cliente.nome} - ({status})',
+                    'start': servico.agendamento.datetime_inicio,
+                    'end': servico.agendamento.datetime_fim,
+                    'description' : f'Serviço para o veículo ({servico.tipo_veiculo.nome_veiculo}) placa ({servico.cliente.placa_carro})',
+                    'color': color
+                })
+
+            return JsonResponse({'success': True, 'events': events})
+
         except Exception as e:
             logger.error(repr(e))
-            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o tipo veiculo ({type_vehicle_id})\nEntre em contato com o suporte'})
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar enviar os eventos ao calendário\nEntre em contato com o suporte'})
 
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
-    # Obtendo os parâmetros de mês e ano da requisição
-    month = request.GET.get('month', 1)  # Mês (1-12)
-    year = request.GET.get('year', 2024)  # Ano
-
-    events = []
-
-    events.append({
-            'title': 'Reunião com cliente',  # Título do agendamento
-            'start': '2024-11-10T14:00:00',  # Data de início
-            'end': '2024-11-10T15:30:00',  # Data de término
-            'description' : 'Discussão de projeto com cliente.'
-        })
-
-    # Retornando os eventos como JSON
-    return JsonResponse(events, safe=False)
