@@ -125,7 +125,6 @@ def edit_type_vehicle(request):
 # Excluir
 
 # Método POST para excluir cliente
-@csrf_exempt
 def delete_customer(request):
     if request.method == 'POST':
         try:
@@ -158,7 +157,6 @@ def delete_customer(request):
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
 # Método POST para excluir agendamento
-@csrf_exempt
 def delete_scheduling(request):
     if request.method == 'POST':
         try:
@@ -191,7 +189,6 @@ def delete_scheduling(request):
 
 
 # Método POST para excluir serviço
-@csrf_exempt
 def delete_service(request):
     if request.method == 'POST':
         try:
@@ -228,7 +225,6 @@ def delete_service(request):
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
 # Método POST para excluir tipo serviço
-@csrf_exempt
 def delete_type_service(request):
     if request.method == 'POST':
         try:
@@ -260,7 +256,6 @@ def delete_type_service(request):
     return JsonResponse({'success': False, 'message': 'Method not allowed'})
 
 # Método POST para excluir tipo veiculo
-@csrf_exempt
 def delete_type_vehicle(request):
     if request.method == 'POST':
         try:
