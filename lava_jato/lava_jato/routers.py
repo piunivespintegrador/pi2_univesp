@@ -5,8 +5,8 @@ class MySQLRouter:
     def IsMySQLModel(self, model_name):
         return  model_name == 'agendamento' or \
                 model_name == 'cliente' or \
-                model_name == 'forma_contato' or \
-                model_name == 'servico_forma_contato' or \
+                model_name == 'formacontato' or \
+                model_name == 'servicoformacontato' or \
                 model_name == 'servico' or \
                 model_name == 'tiposervico' or \
                 model_name == 'tipoveiculo'
