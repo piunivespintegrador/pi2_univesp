@@ -24,7 +24,7 @@ function Success(message)
     document.getElementById('result').style.color = 'green';
 }
 
-document.getElementById('schedulingForm').addEventListener('submit', function(event) {
+document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio do formulário
 
     Reset();

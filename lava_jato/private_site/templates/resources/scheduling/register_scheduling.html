@@ -4,7 +4,7 @@
     <div class="centered-wrapper">
         <div class="container">
             <h2 style="text-align:center;">Cadastro do Agendamento</h2>
-            <form id="schedulingForm" action="{% url 'register_scheduling' %}" method="POST">
+            <form id="registerForm" action="{% url 'register_scheduling' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="data">Data do Inicio do Serviço:</label>
