@@ -7,9 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 
-from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo, ServicoFormaContato
+from .models import Cliente, Agendamento, Servico, TipoServico, TipoVeiculo, FormaContato, ServicoFormaContato
 
-from datetime import datetime
+from datetime import datetime, date
 
 logger = logging.getLogger('django')
 
@@ -144,7 +144,27 @@ def register_scheduling(request):
     return render(request, 'resources/scheduling/register_scheduling.html')
 
 def register_service(request):
-    return render(request, 'resources/service/register_service.html')
+    today = date.today()
+
+    tipos_veiculo = TipoVeiculo.objects.all()
+    tipos_servico = TipoServico.objects.all()
+    formas_contato = FormaContato.objects.all()
+
+    agendamentos = Agendamento.objects.using('mysql_db').filter(
+        disponivel=True,
+        datetime_inicio__gte=today
+    )
+
+    data = {
+        'tipos_veiculo' : tipos_veiculo,
+        'tipos_servico' : tipos_servico,
+        'formas_contato' : formas_contato,
+        'agendamentos' : agendamentos
+    }
+
+    print(data)
+
+    return render(request, 'resources/service/register_service.html', {'data': data})
 
 def register_type_service(request):
     if request.method == 'POST':
