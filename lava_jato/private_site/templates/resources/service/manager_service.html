@@ -15,11 +15,16 @@
                 <th>Forma de Contato</th>
                 <th>Descrição</th>
                 <th>Ações</th>
+                <th>Processamento</th>
             </tr>
         </thead>
         <tbody>
             {% for service in page %}
-                <tr id="service-{{ service.id }}">
+                <tr id="service-{{ service.id }}"
+                    class="{% if service.status == 0 %}status-active
+                           {% elif service.status == 1 %}status-progress
+                           {% elif service.status == 2 %}status-done
+                           {% endif %}">
                     <td>{{ service.id }}</td>
                     <td>{{ service.agendamento.id }}</td>
                     <td>{{ service.cliente.placa_carro }}</td>
@@ -46,6 +51,18 @@
                         </button>
                         <button class="btn btn-delete" onclick="confirmDeleteService({{ service.id }})">
                             <i class="fas fa-trash-alt"></i> Excluir
+                        </button>
+                    </td>
+                    <td>
+                        <button href="" class="btn  {% if service.status == 0 %}btn-swap-progress
+                                                    {% elif service.status == 1 %}btn-swap-done
+                                                    {% elif service.status == 2 %}btn-swap-active
+                                                    {% endif %}">
+                            <i class="fa-solid fa-retweet"></i>
+                            {% if service.status == 0 %}Iniciar
+                            {% elif service.status == 1 %}Finalizar
+                            {% elif service.status == 2 %}Reabrir
+                            {% endif %}
                         </button>
                     </td>
                 </tr>
