@@ -7,8 +7,8 @@
             <form id="registerForm" action="{% url 'register_type_vehicle' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="cliente">Tipo Veículo:</label>
-                    <input type="text" id="tipo-veiculo" name="tipo-veiculo" required>
+                    <label for="nome-veiculo">Nome do Veículo:</label>
+                    <input type="text" id="nome-veiculo" name="nome-veiculo" required>
                 </div>
                 <button type="submit" class="btn-submit">Criar Tipo Veículo</button>
             </form>

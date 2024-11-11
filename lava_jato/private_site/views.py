@@ -175,6 +175,39 @@ def register_type_service(request):
     return render(request, 'resources/type_service/register_type_service.html')
 
 def register_type_vehicle(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            nome_veiculo = data.get('nome-veiculo')
+
+            if not nome_veiculo:
+                return JsonResponse({'warning': True, 'message': f'O nome do tipo de veículo é obrigatório'})
+
+            # Verificamos se existe um tipo veículo com o mesmo nome
+            exist_tipo_veiculo = TipoVeiculo.objects.using('mysql_db').filter(nome_veiculo=nome_veiculo).exists()
+
+            if exist_tipo_veiculo:
+                return JsonResponse({'warning': True, 'message': f'O veículo com o nome ({nome_veiculo}) já foi registrado'})
+
+            object_tipo_veiculo = TipoVeiculo.objects.using('mysql_db').create(
+                nome_veiculo=nome_veiculo
+            )
+
+            # Verifique se o objeto foi criado com sucesso
+            if not object_tipo_veiculo:
+                return JsonResponse({'success': False, 'message': f'Falha ao tentar criar o tipo veículo - não foi possível criar objeto'})
+
+            return JsonResponse({'success': True, 'message': f'Tipo Veículo cadastrado com sucesso'})
+
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'message': 'Erro ao processar os dados.'})
+
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao tentar criar Tipo Veículo\nEntre em contato com o suporte'})
+
     return render(request, 'resources/type_vehicle/register_type_vehicle.html')
 
 # Editar
