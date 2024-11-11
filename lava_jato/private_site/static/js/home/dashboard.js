@@ -1,3 +1,5 @@
+const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
 let calendar = null;
 
 function showModelYear() {
@@ -41,30 +43,51 @@ function changeYear() {
     alertMessage("Por favor, insira um ano válido entre 1900 e 2100.");
 }
 
+function getCalendarServiceEvent(info, successCallback, failureCallback) {
+    // Quando a visualização do calendário for carregada
+    let data = {
+        'start-data': info.start.toISOString(), // Data inicial do intervalo
+        'end-data': info.end.toISOString(),     // Data final do intervalo
+    }
+
+    console.log('request:', data);
+
+    // Envia os dados via AJAX (usando fetch)
+    fetch('/admin/service/calendar_service_event/', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': csrf_token
+        },
+        body: JSON.stringify(data)  // Envia os dados coletados no FormData
+    })
+    .then(response => response.json())  // Aqui você pode ajustar a resposta de acordo com sua view
+    .then(data => {
+        // Trate a resposta aqui, por exemplo, mostre uma mensagem de sucesso
+        console.info(data);
+
+        if(data.warning) {
+            alertMessage(data.message);
+            failureCallback(data.message);
+            return;
+        }
+        else if(data.success) {
+            successCallback(data.events);
+            return;
+        }
+
+        alertMessage(data.message);
+        failureCallback(data.message);
+    })
+    .catch(error => {
+        alertMessage('Erro ao tentar receber informação dos eventos de agendamento dos serviço');
+        failureCallback(error);
+
+        console.error('Error:', error);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const calendarEl = document.getElementById("calendar");
-
-    // Mock data para os agendamentos
-    const schedules = [
-        {
-            title: "Reunião com cliente",
-            start: "2024-11-05T10:00:00",
-            end: "2024-11-05T11:30:00",
-            description: "Discussão de projeto com cliente."
-        },
-        {
-            title: "Serviço de Manutenção",
-            start: "2024-11-10T14:00:00",
-            end: "2024-11-10T15:30:00",
-            description: "Manutenção preventiva no escritório."
-        },
-        {
-            title: "Consultoria Técnica",
-            start: "2024-11-15T09:00:00",
-            end: "2024-11-15T10:00:00",
-            description: "Consultoria técnica sobre novos sistemas."
-        }
-    ];
 
     calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "dayGridMonth",
@@ -83,19 +106,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         },
-        events: schedules,
+        events: function(info, successCallback, failureCallback) {
+            // Chama a função separada para buscar os eventos
+            getCalendarServiceEvent(info, successCallback, failureCallback);
+        },
         eventClick: function(info) {
             // Exibe informações do serviço em um alerta
-            alert(
+            alertMessage(
                 `Serviço: ${info.event.title}\n` +
                 `Início: ${info.event.start.toLocaleString()}\n` +
                 `Fim: ${info.event.end ? info.event.end.toLocaleString() : "N/A"}\n` +
                 `Descrição: ${info.event.extendedProps.description}`
             );
-        },
-        dateClick: function(info) {
-            console.log('Clicou na data: ' + info.dateStr);
-        },
+        }
     });
 
     calendar.render();

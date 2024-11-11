@@ -46,12 +46,14 @@ function deleteService() {
             } else {
                 alertMessage(data.message);
             }
+
             closeModal();
         })
         .catch(error => {
-            console.error('Error:', error);
             alertMessage('Erro ao tentar excluir o serviço ' + service_id + '.');
             closeModal();
+
+            console.error('Error:', error);
         });
     }
 }

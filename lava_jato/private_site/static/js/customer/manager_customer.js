@@ -49,9 +49,10 @@ function deleteCustomer() {
             closeModal();
         })
         .catch(error => {
-            console.error('Error:', error);
             alertMessage('Erro ao tentar excluir o cliente ' + cliente_id + '.');
             closeModal();
+
+            console.error('Error:', error);
         });
     }
 }

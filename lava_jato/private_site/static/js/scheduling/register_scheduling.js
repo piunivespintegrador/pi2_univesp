@@ -29,9 +29,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     Reset();
 
-    let result = submitForm(new FormData(this));
-
-    if(!result) return;
+    submitForm(new FormData(this));
 });
 
 function submitForm(formData)
@@ -63,14 +61,10 @@ function submitForm(formData)
             Success(data.message);
         else
             Fail(data.message);
-
-        return true;
     })
     .catch(error => {
-        console.error('Error:', error);
         Fail('Erro ao cadastrar o Agendamento.');
-        return false;
-    });
 
-    return false;
+        console.error('Error:', error);
+    });
 }

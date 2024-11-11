@@ -246,10 +246,7 @@ def delete_customer(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             customer_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             customer = Cliente.objects.get(id=customer_id)
             customer_name = customer.nome
             customer.delete()
@@ -278,10 +275,7 @@ def delete_scheduling(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             scheduling_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             scheduling = Agendamento.objects.get(id=scheduling_id)
             scheduling.delete()
 
@@ -310,10 +304,7 @@ def delete_service(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             service_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             service = Servico.objects.get(id=service_id)
 
             # Coloca o agendamento como disponível
@@ -346,12 +337,8 @@ def delete_type_service(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             type_service_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             type_service = TipoServico.objects.get(id=type_service_id)
-
             type_service.delete()
 
             logger.info(f"tipo serviço {type_service_id} removido com sucesso")
@@ -377,12 +364,8 @@ def delete_type_vehicle(request):
             # Carrega o corpo da requisição como JSON
             data = json.loads(request.body)
 
-            # Extrai o ID do cliente
             type_vehicle_id = data.get('id')
-
-            # Tenta obter o cliente e excluir
             type_vehicle = TipoVeiculo.objects.get(id=type_vehicle_id)
-
             type_vehicle.delete()
 
             logger.info(f"tipo veiculo {type_vehicle_id} removido com sucesso")
@@ -413,3 +396,54 @@ def bi_analysis(request):
 
 def site_edit(request):
     return render(request, 'resources/site/site_edit.html')
+
+
+# Calendar Event
+
+def calendar_service_event(request):
+    if request.method == 'POST':
+        try:
+            # Carrega o corpo da requisição como JSON
+            data = json.loads(request.body)
+
+            start_data = data.get('start-data')
+            end_data = data.get('end-data')
+
+            events = []
+
+            events.append({
+                    'title': 'Reunião com cliente',  # Título do agendamento
+                    'start': start_data,  # Data de início
+                    'end': end_data,  # Data de término
+                    'description' : 'Discussão de projeto com cliente.'
+                })
+            
+            return JsonResponse({'success': True, 'events': events})
+        except TipoVeiculo.DoesNotExist:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Tipo Veiculo ({type_vehicle_id}) não encontrado'})
+
+        except IntegrityError as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro ao excluir o Tipo Veiculo ({type_vehicle_id})\nPor favor, delete o(s) tipo veiculo ou remova o serviço associado aos mesmos para continuar com a exclusão'})
+        except Exception as e:
+            logger.error(repr(e))
+            return JsonResponse({'success': False, 'message': f'Erro crítico ao excluir o tipo veiculo ({type_vehicle_id})\nEntre em contato com o suporte'})
+
+    return JsonResponse({'success': False, 'message': 'Method not allowed'})
+
+    # Obtendo os parâmetros de mês e ano da requisição
+    month = request.GET.get('month', 1)  # Mês (1-12)
+    year = request.GET.get('year', 2024)  # Ano
+
+    events = []
+
+    events.append({
+            'title': 'Reunião com cliente',  # Título do agendamento
+            'start': '2024-11-10T14:00:00',  # Data de início
+            'end': '2024-11-10T15:30:00',  # Data de término
+            'description' : 'Discussão de projeto com cliente.'
+        })
+
+    # Retornando os eventos como JSON
+    return JsonResponse(events, safe=False)
