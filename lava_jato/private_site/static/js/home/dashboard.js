@@ -1,3 +1,46 @@
+let calendar = null;
+
+function showModelYear() {
+    // obtem o ano que adiciona no input do year
+    document.getElementById('yearInput').value = calendar.getDate().getFullYear();
+    document.getElementById('modelYear').style.display = 'flex';
+}
+
+// Função para fechar o modal
+function closeModal() {
+    document.getElementById('modelYear').style.display = 'none';
+}
+
+function alertMessage(message) {
+    document.getElementById('modelAlertMessage').innerText = message;
+    document.getElementById('modelAlert').style.display = 'flex';
+}
+
+// Função para fechar o modal
+function closeAlertModal() {
+    document.getElementById('modelAlert').style.display = 'none';
+}
+
+function changeYear() {
+    let year = document.getElementById('yearInput').value;
+
+    // se já estiver o ano, ignora
+    if(year == calendar.getDate().getFullYear()) {
+        closeModal();
+        return;
+    }
+
+    // faz a troca do ano se estiver dentro dos limites
+    if (year && !isNaN(year) && year >= 1900 && year <= 2100) {
+        // Navega para o primeiro dia do ano selecionado
+        calendar.gotoDate(year + "-01-01");
+        closeModal();
+        return;
+    }
+
+    alertMessage("Por favor, insira um ano válido entre 1900 e 2100.");
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const calendarEl = document.getElementById("calendar");
 
@@ -23,13 +66,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
 
-    const calendar = new FullCalendar.Calendar(calendarEl, {
+    calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "dayGridMonth",
         locale: "pt-br",
         headerToolbar: {
             left: "prev,next today",
             center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay"
+            right: "dayGridMonth,timeGridWeek,timeGridDay,yearSelect"
+        },
+        customButtons: {
+            yearSelect: {
+                text: 'select year',
+                click: function() {
+                    // Abre o modal
+                    showModelYear();
+                }
+            }
         },
         events: schedules,
         eventClick: function(info) {
@@ -40,6 +92,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 `Fim: ${info.event.end ? info.event.end.toLocaleString() : "N/A"}\n` +
                 `Descrição: ${info.event.extendedProps.description}`
             );
+        },
+        dateClick: function(info) {
+            console.log('Clicou na data: ' + info.dateStr);
         },
     });
 

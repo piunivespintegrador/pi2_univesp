@@ -7,6 +7,28 @@
             <div id="calendar"></div>
         </div>
 
+        <!-- Modal para seleção de ano -->
+        <div id="modelYear" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <label for="yearInput">Ano:</label>
+                    <input type="number" id="yearInput" class="form-control" placeholder="Digite o ano" min="1900" max="2100">
+                </div>
+                <div class="modal-footer">
+                    <button onclick="changeYear()" type="button" class="btn btn-primary" id="searchYearBtn">Pesquisar</button>
+                    <button onclick="closeModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para mensagem -->
+        <div id="modelAlert" class="modal">
+            <div class="modal-content">
+                <p id="modelAlertMessage"></p>
+                <button onclick="closeAlertModal()">OK</button>
+            </div>
+        </div>
+
         {% load static %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css">
         <link rel="stylesheet" href="{% static '/css/home/dashboard.css' %}">
