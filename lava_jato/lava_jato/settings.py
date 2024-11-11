@@ -15,6 +15,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+from logging.handlers import RotatingFileHandler
+
 # Carrega as variáveis do arquivo .env
 load_dotenv()
 
@@ -154,7 +156,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
             'format': '{levelname} {asctime} {module} {message}',
@@ -169,11 +171,13 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+            'formatter': 'verbose',
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'maxBytes':  1 * 1024 * 1024,   # 1 MB por arquivo de log
+            'backupCount': 5,               # 5 arquivos de log máximo
             'filename': f'{BASE_DIR}/storage/logs/debug.log',
             'formatter': 'verbose',
         },
