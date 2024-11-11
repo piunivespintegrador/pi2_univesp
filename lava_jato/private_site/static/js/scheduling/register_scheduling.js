@@ -54,8 +54,10 @@ function submitForm(formData)
         data[key] = value;
     });
 
+    let request_uri = document.getElementById('registerForm').action
+
     // Envia os dados via AJAX (usando fetch)
-    fetch(`/admin/scheduling/register_scheduling/`, {
+    fetch(request_uri, {
         method: 'POST',
         headers: {
             'X-CSRFToken': csrf_token
