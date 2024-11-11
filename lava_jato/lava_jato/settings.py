@@ -39,6 +39,11 @@ ALLOWED_HOSTS = [
     '0.0.0.0'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://pi2-univesp.onrender.com',
+    'https://www.pi2-univesp.onrender.com',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
