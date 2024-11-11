@@ -104,7 +104,8 @@ class Command(BaseCommand):
                 tipo_servico_id=random.choice(tipos_servico).id,
                 tipo_veiculo_id=random.choice(tipos_veiculo).id,
                 mensagem=fake.text(),
-                valor_servico=random.uniform(50.00, 500.00)
+                valor_servico=random.uniform(50.00, 500.00),
+                status=random.choice([0, 1, 2])
             )
 
             self.stdout.write(f'\t{servico}')
