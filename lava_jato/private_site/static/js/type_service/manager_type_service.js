@@ -1,3 +1,5 @@
+const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
 let type_service_id = null;
 
 // Função para abrir o modal e definir o ID do cliente a ser excluído
@@ -30,7 +32,7 @@ function deleteTypeService() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': '{{ csrf_token }}'  // Inclui o token CSRF para segurança
+                'X-CSRFToken': csrf_token  // Inclui o token CSRF para segurança
             },
             body: JSON.stringify({ id: type_service_id })
         })
