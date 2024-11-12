@@ -307,8 +307,6 @@ def register_service(request):
         'agendamentos' : agendamentos
     }
 
-    print(data)
-
     return render(request, 'resources/service/register_service.html', {'data': data})
 
 def register_type_service(request):
