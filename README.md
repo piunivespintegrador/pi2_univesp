@@ -2,7 +2,19 @@
 
 Projeto Integrador II
 
-Participantes:
+## Link Demo:
+
+### Página pública
+
+[Página do Cliente](https://pi2-univesp.onrender.com/)
+
+### Página administração
+
+[Página da Administração](https://pi2-univesp.onrender.com/admin)
+
+* OBS: A página de administração não esta protegido pois é apenas um trabalho para o projeto integrador e não algo comercial.
+
+## Participantes:
 
 ```
 Angra Dias de Olivera
@@ -14,6 +26,8 @@ Lucas Edson Santos Silva
 Raquel Alves Nogueira Santos
 Silvio Soares Pereira
 ```
+
+## Instalação e Configuração
 
 Código do projeto integrador 2 usando Django 5.1.2 e Python 3.12.3
 
