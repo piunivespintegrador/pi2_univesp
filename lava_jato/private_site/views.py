@@ -249,7 +249,7 @@ def register_service(request):
 
             logger.info('Criando serviço')
 
-            mensagem = data.get('mensagem')
+            mensagem = data.get('mensagem', '')
 
             servico = Servico.objects.using('mysql_db').create(
                 agendamento_id=agendamento.id,

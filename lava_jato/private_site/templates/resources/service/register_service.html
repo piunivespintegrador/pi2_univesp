@@ -110,9 +110,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="agendamento"> Descrição Adicional </label>
+                    <label for="mensagem"> Descrição Adicional </label>
                     <p id="countText">0 caracteres</p>
-                    <textarea   maxlength="200"
+                    <textarea   id="mensagem"
+                                name="mensagem"
+                                maxlength="200"
                                 cols="54" rows="5"
                                 placeholder="Sua mensagem (Campo Opcional)"
                                 oninput="countText(this)"
