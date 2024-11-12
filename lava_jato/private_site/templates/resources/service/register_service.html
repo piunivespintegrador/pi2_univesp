@@ -1,6 +1,143 @@
 {% extends 'resources/base.html' %}
 
 {% block content %}
-<h2>Cadastrar Serviço</h2>
-<p>Template</p>
+    <div class="centered-wrapper">
+        <div class="container">
+            <h2 style="text-align:center;">Cadastro do Serviço</h2>
+            <form id="registerForm" action="{% url 'register_service' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="nome-cliente"><p style="display:inline; color: red;">*</p> Nome do Cliente:</label>
+                    <input  type="text"
+                            id="nome-cliente"
+                            name="nome-cliente"
+                            placeholder="Maria Aparecida"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <label for="placa-carro"><p style="display:inline; color: red;">*</p> Placa do Veículo:</label>
+                    <input  type="text"
+                            id="placa-carro"
+                            name="placa-carro"
+                            placeholder="ABC-1234 ou ABC1D23"
+                            pattern="([A-Z]{3}-\d{4})|([A-Z]{3}\d[A-Z]\d{2})"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-veiculo"><p style="display:inline; color: red;">*</p> Tipo de Veículo:</label>
+                    <select id="tipo-veiculo"
+                            name="tipo-veiculo-id"
+                            onchange="removerDisabled(this)"
+                            required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        {% for tipo_veiculo in data.tipos_veiculo %}
+                            <option value="{{ tipo_veiculo.id }}">{{ tipo_veiculo.nome_veiculo }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-principal"><p style="display:inline; color: red;">*</p> E-mail de Contato (Principal):</label>
+                    <input  type="email"
+                            id="email-principal"
+                            name="email-principal"
+                            placeholder="seuemail@exemplo.com.br"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-secundario"> E-mail de Contato:</label>
+                    <input  type="email"
+                            id="email-secundario"
+                            name="email-secundario"
+                            placeholder="seuemail@exemplo.com.br">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone-principal"><p style="display:inline; color: red;">*</p> Telefone de Contato (Principal):</label>
+                    <input  type="tel"
+                            id="telefone-principal"
+                            name="telefone-principal"
+                            placeholder="(99) 9999-9999"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone-secundario"> Telefone de Contato:</label>
+                    <input  type="tel"
+                            id="telefone-secundario"
+                            name="telefone-secundario"
+                            placeholder="(99) 9999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="forma-contato"> Forma(s) de Contato:</label>
+                    {% for forma_contato in data.formas_contato %}
+                        <label for="forma-contato-{{ forma_contato.id }}">
+                            <input type="checkbox" id="forma-contato-{{ forma_contato.id }}" name="forma-contato-{{ forma_contato.id }}" value="{{ forma_contato.id }}">
+                            {{ forma_contato.forma_nome }}
+                        </label>
+                    {% endfor %}
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-servico"><p style="display:inline; color: red;">*</p> Tipo de Serviço:</label>
+                    <select id="tipo-servico"
+                            name="tipo-servico-id"
+                            onchange="removerDisabled(this); calculateServiceValue(this)"
+                            required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        {% for tipo_servico in data.tipos_servico %}
+                            <option value="{{ tipo_servico.id }}" price="{{ tipo_servico.valor_servico }}">{{ tipo_servico.nome_servico }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="agendamento"><p style="display:inline; color: red;">*</p> Data Disponível:</label>
+                    <select id="agendamento"
+                            name="agendamento-id"
+                            onchange="removerDisabled(this)"
+                            required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        {% for agendamento in data.agendamentos %}
+                            <option value="{{ agendamento.id }}">{{ agendamento.datetime_inicio }} - {{ agendamento.datetime_fim }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem"> Descrição Adicional </label>
+                    <p id="countText">0 caracteres</p>
+                    <textarea   id="mensagem"
+                                name="mensagem"
+                                maxlength="200"
+                                cols="54" rows="5"
+                                placeholder="Sua mensagem (Campo Opcional)"
+                                oninput="countText(this)"
+                                value=""></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor-servico">Valor Final (R$): </label>
+                    <input type="text" id="valor-servico" name="valor-servico" required oninput="moneyFormat(this)" disabled>
+                </div>
+                <button type="submit" class="btn-submit">Agendar Serviço</button>
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' />
+    <link rel="stylesheet" href="{% static '/css/service/register_service.css' %}">
+
+    <!-- Scripts do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="{% static '/js/service/register_service.js' %}"></script>
 {% endblock %}
