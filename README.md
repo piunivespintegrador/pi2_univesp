@@ -6,13 +6,15 @@ Projeto Integrador II
 
 ### Página pública
 
-[Página do Cliente](https://pi2-univesp.onrender.com/)
+* [Página do Cliente](https://pi2-univesp.onrender.com/)
 
 ### Página administração
 
-[Página da Administração](https://pi2-univesp.onrender.com/admin)
+* [Página da Administração](https://pi2-univesp.onrender.com/admin)
 
-* OBS: A página de administração não esta protegido pois é apenas um trabalho para o projeto integrador e não algo comercial.
+```
+OBS: A página de administração não esta protegido pois é apenas um trabalho para o projeto integrador e não algo comercial.
+```
 
 ## Participantes:
 
