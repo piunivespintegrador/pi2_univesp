@@ -27,8 +27,8 @@
 
                 <div class="form-group">
                     <label for="tipo-veiculo"><p style="display:inline; color: red;">*</p> Tipo de Veículo:</label>
-                    <select id="opcao-tipo-veiculo"
-                            name="opcao-tipo-veiculo"
+                    <select id="tipo-veiculo"
+                            name="tipo-veiculo-id"
                             onchange="removerDisabled(this)"
                             required>
                         <option value="" disabled selected>Selecione uma opção...</option>
@@ -73,19 +73,20 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="tipo-servico"> Forma(s) de Contato:</label>
+                    <label for="forma-contato"> Forma(s) de Contato:</label>
                     {% for forma_contato in data.formas_contato %}
-                    <label for="forma-contato-{{ forma_contato.id }}">
-                        <input type="checkbox" id="forma-contato-{{ forma_contato.id }}" name="forma-contato-{{ forma_contato.id }}" value="{{ forma_contato.id }}">
-                        {{ forma_contato.forma_nome }}
-                    </label>
+                        <label for="forma-contato-{{ forma_contato.id }}">
+                            <input type="checkbox" id="forma-contato-{{ forma_contato.id }}" name="forma-contato-{{ forma_contato.id }}" value="{{ forma_contato.id }}">
+                            {{ forma_contato.forma_nome }}
+                        </label>
                     {% endfor %}
+                    </label>
                 </div>
 
                 <div class="form-group">
                     <label for="tipo-servico"><p style="display:inline; color: red;">*</p> Tipo de Serviço:</label>
-                    <select id="opcao-tipo-servico"
-                            name="opcao-tipo-servico"
+                    <select id="tipo-servico"
+                            name="tipo-servico-id"
                             onchange="removerDisabled(this); calculateServiceValue(this)"
                             required>
                         <option value="" disabled selected>Selecione uma opção...</option>
@@ -98,7 +99,7 @@
                 <div class="form-group">
                     <label for="agendamento"><p style="display:inline; color: red;">*</p> Data Disponível:</label>
                     <select id="agendamento"
-                            name="agendamento"
+                            name="agendamento-id"
                             onchange="removerDisabled(this)"
                             required>
                         <option value="" disabled selected>Selecione uma opção...</option>
@@ -106,6 +107,16 @@
                             <option value="{{ agendamento.id }}">{{ agendamento.datetime_inicio }} - {{ agendamento.datetime_fim }}</option>
                         {% endfor %}
                     </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="agendamento"> Descrição Adicional </label>
+                    <p id="countText">0 caracteres</p>
+                    <textarea   maxlength="200"
+                                cols="54" rows="5"
+                                placeholder="Sua mensagem (Campo Opcional)"
+                                oninput="countText(this)"
+                                value=""></textarea>
                 </div>
 
                 <div class="form-group">

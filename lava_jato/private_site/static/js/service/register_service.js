@@ -25,6 +25,15 @@ function calculateServiceValue(element) {
     moneyFormat(servicePriceInput)
 }
 
+function countText(textarea) {
+    // Obtém o valor digitado no textarea
+    const texto = textarea.value;
+
+    // Atualiza o contador de caracteres
+    const contador = document.getElementById('countText');
+    contador.textContent = texto.length + " caracteres";
+}
+
 function Reset(message)
 {
     document.getElementById('result').textContent = '';
