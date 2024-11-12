@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lava Jato</title>
-    <!-- Carregar arquivos estáticos do Django -->
-    {% load static %}
-    <!-- Referência ao arquivo CSS -->
-    <link rel="stylesheet" href="{% static '/css/home.css' %}">
-    <!-- Script para o dropdown -->
-    <script src="{% static '/js/home.js' %}"></script>
-</head>
-<body>
-    <!-- Banner -->
-    <div class="banner">
-        <h2>Bem-vindo ao Lava Jato!</h2>
-    </div>
+{% extends 'resources/public_base.html' %}
 
+{% block public_content %}
+    {% load static %}
     <!-- Botões principais -->
     <div class="buttons">
-        <a href="#" class="button">Agendar Agora</a>
+        <a href="{% url 'public_register_service' %}" class="button">Agendar Agora</a>
         <a href="#" class="button">Whatsapp</a>
     </div>
 
@@ -75,13 +60,13 @@
 
     <!-- Botões principais (replicados no fim da página) -->
     <div class="buttons">
-        <a href="#" class="button">Agendar Agora</a>
+        <a href="{% url 'public_register_service' %}" class="button">Agendar Agora</a>
         <a href="#" class="button">Whatsapp</a>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2023 Meu Site. Todos os direitos reservados.
-    </div>
-</body>
-</html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/home/public_home.css' %}">
+
+    <!-- Script personalizado -->
+    <script src="{% static '/js/home/public_home.js' %}"></script>
+{% endblock %}
